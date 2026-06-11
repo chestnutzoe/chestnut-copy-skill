@@ -1,9 +1,9 @@
 ---
-name: chestnut-copy-sop
+name: Chestnut-cop
 description: Use when a Chinese creator wants to write, rewrite, evaluate, or adapt copy with Zoe/Chestnut's copywriting method, especially for topic judgment, audience insight, cover/title/hook decisions, retention checks, anti-AI editing, and multi-platform copy packages.
 ---
 
-# Chestnut 爆款文案 SOP
+# 爆款文案 SOP
 
 ## Purpose
 
@@ -20,8 +20,8 @@ It can run alone, but works best with a user-specific `文风说明.md` from the
 The full Chestnut Copy skill set has three independent skills:
 
 1. 文风分析: use the creator's own writing samples to answer `像不像你`.
-2. Chestnut 爆款文案 SOP: use this method to answer `有没有传播力`.
-3. 公众号发布助手: send an approved draft to the WeChat draft box.
+2. 爆款文案 SOP: use this method to answer `有没有传播力`.
+3. 公众号发布: send an approved draft to the WeChat draft box.
 
 If a `文风说明.md` exists, load it before drafting. If not, ask whether the user wants to provide samples or continue with the SOP only.
 
@@ -103,4 +103,4 @@ When the draft may become video or short-form content, include:
 
 This skill can prepare a WeChat-ready mother draft, title, digest, and cover direction. It does not upload drafts by itself.
 
-If the user wants to upload to WeChat, hand off to `公众号发布助手`.
+If the user wants to upload to WeChat, hand off to `公众号发布`.

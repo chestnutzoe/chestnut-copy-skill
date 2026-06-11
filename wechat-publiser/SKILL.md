@@ -1,9 +1,9 @@
 ---
-name: wechat-draft-assistant
-description: Use when a creator has an approved local Markdown or HTML article and wants to prepare title, digest, cover handling, and WeChat Official Account draft-box upload for manual backend review.
+name: wechat-publiser
+description: Use when a creator has an approved local Markdown or HTML article and wants to prepare title, digest, cover handling, WeChat API credential/IP preflight, and Official Account draft-box upload for manual backend review.
 ---
 
-# 公众号发布助手
+# 公众号发布
 
 ## Purpose
 
@@ -40,6 +40,26 @@ Use persistent local credentials by default. The script reads:
 Existing environment variables win over file values.
 
 Never commit AppID, AppSecret, access tokens, article JSON, or private generated drafts.
+
+## API Preflight
+
+Before any live WeChat API call, check whether the user has already configured the local WeChat API setup.
+
+If `WECHAT_MP_APPID` and `WECHAT_MP_APPSECRET` are missing from environment variables and the known env files, ask first:
+
+```text
+你本机已经配置公众号 API 了吗？
+需要有 WECHAT_MP_APPID 和 WECHAT_MP_APPSECRET。
+如果还没有，请先在本地创建 .secrets/wechat-mp.env；不要把 AppSecret 发到聊天里。
+```
+
+If the user has credentials but has not confirmed the current machine IP is in the WeChat Official Account IP whitelist, ask them to do the IP whitelist step before running a real upload.
+
+Only proceed to `publish_draft.py` when:
+
+- AppID/AppSecret are available locally, and
+- the current public IP is confirmed in the WeChat API whitelist, and
+- the user has approved creating a draft.
 
 ## First Live API Check
 
@@ -119,7 +139,7 @@ Use `python3 -B` so Python does not write cache files in restricted app environm
 
 From `文风分析`, use the generated voice guide only if copy still needs editing.
 
-From `Chestnut 爆款文案 SOP`, expect:
+From `爆款文案 SOP`, expect:
 
 - final mother draft path,
 - selected title,

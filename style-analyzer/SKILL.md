@@ -1,5 +1,5 @@
 ---
-name: chestnut-style-analyzer
+name: style-analyzer
 description: Use when a creator wants to analyze their own writing voice from historical copy, especially WeChat Official Account articles or local Markdown, HTML, TXT, or JSON exports, and produce a reusable style guide for future copywriting.
 ---
 
@@ -16,8 +16,8 @@ It answers one question:
 It is independent, but works best as the first layer of the Chestnut Copy skill set:
 
 1. 文风分析: extract the creator's voice.
-2. Chestnut 爆款文案 SOP: use Zoe/Chestnut's production method.
-3. 公众号发布助手: upload approved drafts to the WeChat draft box.
+2. 爆款文案 SOP: use Zoe/Chestnut's production method.
+3. 公众号发布: upload approved drafts to the WeChat draft box.
 
 ## Source Rule
 
