@@ -1,55 +1,87 @@
-# Chestnut 爆款文案三层 Skill
+# Chestnut Copy Skill Set
 
-读取文风、套用 Chestnut 爆款文案 SOP、必要时放进公众号草稿箱。
+这是 Zoe / Chestnut 的中文创作者文案 Skill 套装。
 
-这是一个给中文创作者用的三层 AI 文案 Skill。它会用你的历史文案生成一份属于你的 `文风说明.md`，再用 Chestnut 的爆款文案 SOP 帮你判断选题、打磨封面标题 Hook、检查留存率，最后在需要时把确认好的本地文章放进公众号草稿箱。
+它不是一个单独 Skill，而是三个可以独立安装、也可以组合使用的 Skill：
 
-## 三层结构
+| Skill | 中文名 | 负责什么 | 可以单独用吗 |
+| --- | --- | --- | --- |
+| `chestnut-style-analyzer` | 文风分析 | 从公众号历史文章或本地文案里总结个人文风，生成 `文风说明.md` | 可以 |
+| `chestnut-copy-sop` | Chestnut 爆款文案 SOP | 用 Zoe/Chestnut 的方法做选题、洞察、结构、封面标题 Hook、留存率和去 AI 味 | 可以 |
+| `wechat-draft-assistant` | 公众号发布助手 | 处理标题、摘要、封面预检，并把确认后的文章上传到公众号草稿箱 | 可以 |
+
+## 推荐使用方式
+
+完整流程：
+
+```text
+文风分析 -> Chestnut 爆款文案 SOP -> 公众号发布助手
+```
+
+三层分工：
 
 1. **文风分析**
-   从你的历史母稿里总结你的个人文案风格，负责判断“像不像你”。推荐用公众号历史文章，因为很多创作者会先把母稿发在公众号；也可以用本地 Markdown、HTML、TXT 或 JSON 文件。
+   负责“像不像你”。推荐读取公众号历史母稿，也支持本地 Markdown、HTML、TXT、JSON 文案。
 
 2. **Chestnut 爆款文案 SOP**
-   用 Zoe / Chestnut 的文案方法论做选题判断、用户洞察、痛点排序、结构、封面标题 Hook、人味注入、去 AI 味和留存率检查，负责判断“这篇内容有没有传播力”。
+   负责“有没有传播力”。重点是选题判断、用户洞察、痛点、结构、封面标题 Hook、人味注入、去 AI 味、留存率检查。
 
 3. **公众号发布助手**
-   可选发布层。处理标题、摘要、封面检查、公众号草稿箱上传和发布前人工审核，负责“怎么落地”。
+   负责“怎么落地”。重点是标题、摘要、封面、公众号草稿箱、发布前人工审核。
 
-## 适合谁
-
-- 内容创作者
-- 公众号写作者
-- 个人品牌 / 一人公司
-- 想把历史文案变成 AI 工作流的人
-- 想让 AI 帮忙写母稿，但不想每次重新教文风的人
-
-## 安装
-
-把这个文件夹作为 Skill 放进你的 AI 工具支持的 skills 目录里。
-
-推荐仓库名：
+## 文件结构
 
 ```text
-chestnut-copy-skill
+.
+├── README.md
+├── chestnut-style-analyzer/
+│   ├── SKILL.md
+│   ├── agents/openai.yaml
+│   ├── references/wechat-api.md
+│   └── scripts/fetch_wechat_articles.py
+├── chestnut-copy-sop/
+│   ├── SKILL.md
+│   ├── agents/openai.yaml
+│   └── references/chestnut-copy-sop.md
+└── wechat-draft-assistant/
+    ├── SKILL.md
+    ├── agents/openai.yaml
+    ├── references/wechat-api.md
+    └── scripts/publish_draft.py
 ```
 
-机器识别的 skill name 是：
+## 怎么安装
+
+### 只装一个
+
+只复制你需要的那个文件夹到 AI 工具的 skills 目录。
+
+比如只想用爆款文案方法：
 
 ```text
-chestnut-copy-skill
+chestnut-copy-sop/
 ```
 
-用户看到的名字是：
+### 三个一起装
+
+把这三个文件夹都复制到 skills 目录：
 
 ```text
-Chestnut 爆款文案三层 Skill
+chestnut-style-analyzer/
+chestnut-copy-sop/
+wechat-draft-assistant/
 ```
 
-## 配置公众号凭证（可选）
+文件夹名用英文，是为了兼容 Claude Code、Codex、WorkBuddy 等工具；用户看到的名字在 `agents/openai.yaml` 里是中文。
 
-只有当你要读取公众号历史文章，或把文章上传到公众号草稿箱时，才需要配置公众号凭证。
+## 公众号凭证
 
-第一次使用前，在本地创建一个不会上传到 GitHub 的密钥文件：
+只有这两种情况需要公众号凭证：
+
+- `文风分析` 要从公众号后台读取历史文章；
+- `公众号发布助手` 要把文章上传到公众号草稿箱。
+
+本地长期配置推荐创建一个不会进 Git 的密钥文件：
 
 ```bash
 mkdir -p .secrets
@@ -69,80 +101,15 @@ printf '%s\n' \
 5. skill 目录里的 `.secrets/wechat-mp.env`
 6. `~/.wechat-mp.env`
 
-`.secrets/`、`.env`、`outputs/` 已经写进 `.gitignore`，不要把 AppSecret 上传到 GitHub。
+已存在的系统环境变量优先，不会被文件覆盖。
 
-## 第一次运行
-
-微信公众平台 API 需要 IP 白名单。第一次正式调用 API 前，先获取当前公网 IP：
-
-```bash
-curl -s https://api.ipify.org
-```
-
-然后到公众号后台：
-
-```text
-设置与开发 -> 基本设置 -> IP 白名单
-```
-
-把当前 IP 加进去。
-
-## 读取历史文章并生成文风
-
-读取最新 20 篇已发布文章：
-
-```bash
-python3 -B scripts/fetch_wechat_articles.py \
-  --source published \
-  --count 20 \
-  --output "${STYLE_ANALYZER_ARTICLES:-./outputs/articles.json}"
-```
-
-继续读取更早的 20 篇：
-
-```bash
-python3 -B scripts/fetch_wechat_articles.py \
-  --source published \
-  --offset 20 \
-  --count 20 \
-  --append "${STYLE_ANALYZER_ARTICLES:-./outputs/articles.json}" \
-  --output "${STYLE_ANALYZER_ARTICLES:-./outputs/articles.json}"
-```
-
-如果你已经有本地文章文件，也可以不用微信 API：
-
-```bash
-python3 -B scripts/fetch_wechat_articles.py \
-  --local "/absolute/path/to/article_exports" \
-  --output "${STYLE_ANALYZER_ARTICLES:-./outputs/articles.json}"
-```
-
-AI 读取生成的 `articles.json` 后，会输出：
-
-```text
-./outputs/文风说明.md
-```
-
-## 写文案时怎么用
-
-让 AI 读取：
-
-```text
-./outputs/文风说明.md
-references/chestnut-copy-sop.md
-```
-
-然后按三层流程工作：
-
-- 文风分析：像不像你
-- Chestnut 爆款文案 SOP：值不值得写、结构强不强、封面标题 Hook 有没有传播力、留存率会不会掉
-- 公众号发布助手：标题、摘要、封面、草稿箱、人工审核
+`.secrets/`、`.env`、`outputs/` 已写进 `.gitignore`。不要把 AppSecret、access token、下载文章 JSON、个人文风说明上传到 GitHub。
 
 ## 封面规则
 
 公众号草稿必须有封面。
 
-创建真实草稿前，AI 会先问：
+发布助手创建真实草稿前，会先确认：
 
 ```text
 你现在有公众号封面图吗？
@@ -151,84 +118,47 @@ references/chestnut-copy-sop.md
 没有的话，我先给你封面方向 / AI 生成提示词，等你确认封面后再创建草稿。
 ```
 
-规则：
-
-- 有本地封面图：用 `--cover`
-- 有永久素材 ID：用 `--thumb-media-id`
-- 都没有：只给封面方向或 AI 生成提示词，不创建真实草稿
-
-## 放进公众号草稿箱
-
-使用已有永久素材封面：
-
-```bash
-python3 -B scripts/publish_draft.py \
-  --title "文章标题" \
-  --content "/absolute/path/article.md" \
-  --thumb-media-id "MEDIA_ID_FROM_WECHAT" \
-  --author "${WECHAT_MP_AUTHOR:-}" \
-  --digest "摘要"
-```
-
-使用本地封面图：
-
-```bash
-python3 -B scripts/publish_draft.py \
-  --title "文章标题" \
-  --content "/absolute/path/article.html" \
-  --cover "/absolute/path/cover.jpg" \
-  --author "${WECHAT_MP_AUTHOR:-}" \
-  --digest "摘要"
-```
-
-正式创建前可以先 dry run：
-
-```bash
-python3 -B scripts/publish_draft.py \
-  --title "文章标题" \
-  --content "/absolute/path/article.md" \
-  --thumb-media-id "MEDIA_ID_FROM_WECHAT" \
-  --dry-run
-```
+没有封面时，只给封面方向或 AI 生成提示词，不创建真实草稿。
 
 ## 安全边界
 
 - 默认只创建草稿，不自动发布。
 - 不自动群发。
 - 不自动定时发布。
-- AppSecret 不写进聊天记录、Skill 文件、README 或 GitHub。
-- 草稿创建后，请自己去公众号后台或微信文章助手检查排版、图片、标题、摘要和错别字，再手动发布。
-
-## 文件结构
-
-```text
-.
-├── README.md
-├── SKILL.md
-├── agents/
-│   └── openai.yaml
-├── references/
-│   ├── chestnut-copy-sop.md
-│   └── wechat-api.md
-└── scripts/
-    ├── fetch_wechat_articles.py
-    └── publish_draft.py
-```
+- 真实 AppSecret 不写进聊天记录、Skill 文件、README 或 GitHub。
+- 草稿创建后，必须去公众号后台人工检查排版、图片、标题、摘要和错别字，再手动发布。
 
 ## 常见问题
 
-### 40164 是什么？
+### 为什么 GitHub 上不是一个 `SKILL.md`？
 
-当前机器 IP 不在公众号后台 IP 白名单。重新获取公网 IP，并加到公众号后台。
+因为这是三个独立 Skill 的套装。根目录是说明书，每个子文件夹才是一个真正的 Skill。
 
-### 这个会自动发布吗？
+### 我只想让别人用 Chestnut 爆款文案 SOP，必须装三个吗？
 
-不会。默认只放进草稿箱，最后发布必须人工审核。
+不用。只安装 `chestnut-copy-sop/` 就可以。
 
-### 没有公众号历史文章可以用吗？
+### 我想让别人读取自己的文风后再写文案，怎么装？
 
-可以。用 `--local` 读取你自己的 Markdown、HTML、TXT 或 JSON 历史文案。
+安装：
 
-### 这套 SOP 是通用的吗？
+```text
+chestnut-style-analyzer/
+chestnut-copy-sop/
+```
 
-它是 Zoe / Chestnut 的爆款文案方法论打包版。用户的文风来自自己的历史文章，文案生产流程使用 Chestnut 的 SOP。
+先生成 `文风说明.md`，再让 `Chestnut 爆款文案 SOP` 读取这份文风。
+
+### 我想把文章放到公众号草稿箱，怎么装？
+
+安装：
+
+```text
+wechat-draft-assistant/
+```
+
+如果还需要读取公众号历史文章生成文风，再加：
+
+```text
+chestnut-style-analyzer/
+```
