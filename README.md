@@ -50,21 +50,21 @@
     └── scripts/publish_draft.py
 ```
 
-## 怎么安装
+## Installation
 
-### 只装一个
+### Download This Repo
 
-只复制你需要的那个文件夹到 AI 工具的 skills 目录。
+你可以用两种方式拿到文件：
 
-比如只想用爆款文案方法：
+1. GitHub 页面点击 **Code -> Download ZIP**，解压后选择要安装的 skill 文件夹。
+2. 用命令行 clone：
 
-```text
-Chestnut-cop/
+```bash
+git clone https://github.com/chestnutzoe/chestnut-copy-skill.git
+cd chestnut-copy-skill
 ```
 
-### 三个一起装
-
-把这三个文件夹都复制到 skills 目录：
+这个仓库目前是 **3 个独立 Skill 的套装**，不是单个根目录 Skill。真正的 skill 文件夹是：
 
 ```text
 style-analyzer/
@@ -72,7 +72,87 @@ Chestnut-cop/
 wechat-publiser/
 ```
 
-文件夹名用英文，是为了兼容 Claude Code、Codex、WorkBuddy 等工具；用户看到的名字在 `agents/openai.yaml` 里是中文。
+每个文件夹都可以单独复制到你的 AI 工具 skills 目录里。
+
+### Install All Three For Claude Code
+
+把三个 skill 都装到 Claude Code：
+
+```bash
+mkdir -p ~/.claude/skills
+cp -R style-analyzer ~/.claude/skills/
+cp -R Chestnut-cop ~/.claude/skills/
+cp -R wechat-publiser ~/.claude/skills/
+```
+
+安装后，在 Claude Code 里可以直接让它使用：
+
+```text
+请使用 style-analyzer 帮我分析文风
+请使用 Chestnut-cop 帮我改这篇文案
+请使用 wechat-publiser 帮我放进公众号草稿箱
+```
+
+### Install Only One Skill For Claude Code
+
+只想用爆款文案 SOP：
+
+```bash
+mkdir -p ~/.claude/skills
+cp -R Chestnut-cop ~/.claude/skills/
+```
+
+只想分析文风：
+
+```bash
+mkdir -p ~/.claude/skills
+cp -R style-analyzer ~/.claude/skills/
+```
+
+只想上传公众号草稿：
+
+```bash
+mkdir -p ~/.claude/skills
+cp -R wechat-publiser ~/.claude/skills/
+```
+
+### Install For Codex / WorkBuddy / Other Coding Agents
+
+如果你的工具支持本地 skills 目录，把对应文件夹复制进去即可。
+
+常见位置可能是：
+
+```text
+~/.agents/skills/
+<your-workspace>/.agents/skills/
+```
+
+例如装到 `~/.agents/skills/`：
+
+```bash
+mkdir -p ~/.agents/skills
+cp -R style-analyzer ~/.agents/skills/
+cp -R Chestnut-cop ~/.agents/skills/
+cp -R wechat-publiser ~/.agents/skills/
+```
+
+如果你的 agent 不能直接安装 skill，也可以把这个 GitHub 链接发给它，让它读取你要用的子文件夹：
+
+```text
+https://github.com/chestnutzoe/chestnut-copy-skill
+```
+
+并明确告诉它从哪个文件开始：
+
+```text
+请读取 Chestnut-cop/SKILL.md，并按这个 skill 帮我写文案。
+```
+
+### About Claude Code Plugin Install
+
+Zara 的 `frontend-slides` 是 Claude Code plugin 包装，所以可以用 `/plugin marketplace add ...` 安装。
+
+这个仓库当前先提供通用 skill 文件夹，适合 Claude Code、Codex、WorkBuddy 和其他能读取本地文件的 coding agent。后面如果要做成 Claude Code plugin marketplace 形式，需要再补 `.claude-plugin/` 配置。
 
 ## 公众号凭证
 
