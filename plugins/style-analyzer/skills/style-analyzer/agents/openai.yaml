@@ -1,0 +1,3 @@
+display_name: 文风分析
+short_description: 从公众号历史文章或本地文案中提炼个人文风，生成可复用的文风说明。
+default_prompt: 读取我的历史文案，帮我生成或刷新一份可复用的文风说明。

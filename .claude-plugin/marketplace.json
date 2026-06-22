@@ -1,0 +1,32 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "chestnut-copy-skill",
+  "description": "Three independent Chestnut Copy skills for Chinese creators: voice analysis, viral copy SOP, and WeChat draft publishing.",
+  "owner": {
+    "name": "chestnutzoe",
+    "url": "https://github.com/chestnutzoe"
+  },
+  "plugins": [
+    {
+      "name": "style-analyzer",
+      "description": "Analyze historical writing samples and create a reusable personal copy voice guide.",
+      "source": "./plugins/style-analyzer",
+      "category": "productivity",
+      "tags": ["writing", "copywriting", "wechat", "voice", "style"]
+    },
+    {
+      "name": "Chestnut-cop",
+      "description": "Zoe/Chestnut's copywriting SOP for topic judgment, hooks, structure, retention, and anti-AI editing.",
+      "source": "./plugins/Chestnut-cop",
+      "category": "productivity",
+      "tags": ["copywriting", "hooks", "content", "retention", "wechat"]
+    },
+    {
+      "name": "wechat-publiser",
+      "description": "Prepare title, digest, cover preflight, WeChat API checks, and Official Account draft-box upload.",
+      "source": "./plugins/wechat-publiser",
+      "category": "productivity",
+      "tags": ["wechat", "publishing", "draft", "copywriting"]
+    }
+  ]
+}

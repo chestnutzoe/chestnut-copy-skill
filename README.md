@@ -33,6 +33,13 @@
 
 ```text
 .
+├── .claude-plugin/
+│   └── marketplace.json
+├── plugins/
+│   ├── style-analyzer/
+│   ├── Chestnut-cop/
+│   └── wechat-publiser/
+├── LICENSE
 ├── README.md
 ├── style-analyzer/
 │   ├── SKILL.md
@@ -51,6 +58,56 @@
 ```
 
 ## Installation
+
+### Via Claude Code Custom Marketplace Source
+
+Install directly from this public GitHub repo. Run these as separate Claude Code messages; do not paste all lines into the prompt at once.
+
+First add this repository as a marketplace source:
+
+```text
+/plugin marketplace add https://github.com/chestnutzoe/chestnut-copy-skill
+```
+
+Then install whichever skill you want.
+
+Install **文风分析**:
+
+```text
+/plugin install chestnut-copy-skill@style-analyzer
+```
+
+Install **爆款文案 SOP**:
+
+```text
+/plugin install chestnut-copy-skill@Chestnut-cop
+```
+
+Install **公众号发布**:
+
+```text
+/plugin install chestnut-copy-skill@wechat-publiser
+```
+
+If you want the full workflow, run all three install commands one by one.
+
+Use the HTTPS URL. The shorter `chestnutzoe/chestnut-copy-skill` form may make Claude Code try SSH, which can fail if GitHub is not already in your `known_hosts` file.
+
+After plugin installation, Claude Code namespaces skills as:
+
+```text
+/plugin-name:skill-name
+```
+
+For example:
+
+```text
+/style-analyzer:style-analyzer
+/Chestnut-cop:Chestnut-cop
+/wechat-publiser:wechat-publiser
+```
+
+If installed manually as standalone skills, use the skill names without plugin namespaces.
 
 ### Download This Repo
 
@@ -161,12 +218,6 @@ https://github.com/chestnutzoe/chestnut-copy-skill
 ```text
 请读取 Chestnut-cop/SKILL.md，并按这个 skill 帮我写文案。
 ```
-
-### About Claude Code Plugin Install
-
-Zara 的 `frontend-slides` 是 Claude Code plugin 包装，所以可以用 `/plugin marketplace add ...` 安装。
-
-这个仓库当前先提供通用 skill 文件夹，适合 Claude Code、Codex、WorkBuddy 和其他能读取本地文件的 coding agent。后面如果要做成 Claude Code plugin marketplace 形式，需要再补 `.claude-plugin/` 配置。
 
 ## Usage
 
