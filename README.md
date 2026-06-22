@@ -74,6 +74,20 @@ wechat-publiser/
 
 每个文件夹都可以单独复制到你的 AI 工具 skills 目录里。
 
+### Fast Install For Claude Code
+
+如果你想一次装完三个 skill，可以直接运行：
+
+```bash
+git clone https://github.com/chestnutzoe/chestnut-copy-skill.git /tmp/chestnut-copy-skill
+mkdir -p ~/.claude/skills
+cp -R /tmp/chestnut-copy-skill/style-analyzer ~/.claude/skills/
+cp -R /tmp/chestnut-copy-skill/Chestnut-cop ~/.claude/skills/
+cp -R /tmp/chestnut-copy-skill/wechat-publiser ~/.claude/skills/
+```
+
+如果你之后重新下载，先删除 `/tmp/chestnut-copy-skill` 或换一个临时目录。
+
 ### Install All Three For Claude Code
 
 把三个 skill 都装到 Claude Code：
@@ -153,6 +167,55 @@ https://github.com/chestnutzoe/chestnut-copy-skill
 Zara 的 `frontend-slides` 是 Claude Code plugin 包装，所以可以用 `/plugin marketplace add ...` 安装。
 
 这个仓库当前先提供通用 skill 文件夹，适合 Claude Code、Codex、WorkBuddy 和其他能读取本地文件的 coding agent。后面如果要做成 Claude Code plugin marketplace 形式，需要再补 `.claude-plugin/` 配置。
+
+## Usage
+
+### Use The Full Workflow
+
+装了三个 skill 后，可以这样告诉 agent：
+
+```text
+请先用 style-analyzer 读取我的历史文案，生成文风说明；
+再用 Chestnut-cop 帮我写公众号母稿和封面标题 Hook；
+最后用 wechat-publiser 帮我检查标题、摘要、封面，并放进公众号草稿箱。
+```
+
+完整流程会做：
+
+1. 生成或刷新 `文风说明.md`
+2. 用爆款文案 SOP 判断选题、结构、封面标题 Hook、留存率
+3. 检查公众号 API 配置、IP 白名单、封面图
+4. 只创建公众号草稿，不自动发布
+
+### Use Only 文风分析
+
+```text
+请使用 style-analyzer，读取我的公众号历史文章或本地文案，生成一份文风说明。
+```
+
+如果用户没有公众号 API，也可以让它读取本地 Markdown、HTML、TXT 或 JSON 文件。
+
+### Use Only 爆款文案 SOP
+
+```text
+请使用 Chestnut-cop，帮我判断这个选题值不值得写，并给我 3 组封面 / 标题 / Hook。
+```
+
+它可以单独用；如果已经有 `文风说明.md`，效果会更像用户本人。
+
+### Use Only 公众号发布
+
+```text
+请使用 wechat-publiser，帮我把这篇本地 Markdown/HTML 文章放进公众号草稿箱。
+```
+
+在真正上传前，它应该先确认：
+
+- 本地已有 `WECHAT_MP_APPID`
+- 本地已有 `WECHAT_MP_APPSECRET`
+- 当前公网 IP 已加入公众号后台 IP 白名单
+- 用户已经确认要创建草稿
+- 已有本地封面图或永久素材 `thumb_media_id`
 
 ## 公众号凭证
 
