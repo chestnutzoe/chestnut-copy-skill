@@ -1,7 +1,7 @@
 {
-  "name": "Chestnut-cop",
+  "name": "chestnut",
   "version": "1.0.0",
-  "description": "Zoe/Chestnut's copywriting SOP for topic judgment, hooks, structure, retention, and anti-AI editing.",
+  "description": "A multi-skill Chestnut creator toolkit with style analysis, copy SOP, and WeChat publishing helpers.",
   "skills": "./skills/",
   "author": {
     "name": "chestnutzoe",
@@ -10,5 +10,5 @@
   "homepage": "https://github.com/chestnutzoe/chestnut-copy-skill",
   "repository": "https://github.com/chestnutzoe/chestnut-copy-skill",
   "license": "MIT",
-  "keywords": ["copywriting", "hooks", "content", "retention", "wechat"]
+  "keywords": ["chestnut", "copywriting", "wechat", "creator", "content"]
 }
