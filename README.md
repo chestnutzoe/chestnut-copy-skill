@@ -60,25 +60,25 @@
     └── scripts/publish_draft.py
 ```
 
-## Installation
+## 安装方式
 
-### Via Claude Code Custom Marketplace Source
+### Claude Code Marketplace 安装
 
-Install directly from this public GitHub repo. Run these as separate Claude Code messages; do not paste all lines into the prompt at once.
+可以直接从这个公开 GitHub 仓库安装。下面两条命令需要分成两次发给 Claude Code，不要一次性全部粘贴。
 
-First add this repository as a marketplace source:
+第一步，先把这个仓库添加为 marketplace source：
 
 ```text
 /plugin marketplace add https://github.com/chestnutzoe/chestnut-copy-skill
 ```
 
-Then install the Chestnut plugin:
+第二步，安装 `chestnut` plugin：
 
 ```text
 /plugin install chestnut@chestnut
 ```
 
-This installs the current Chestnut skill suite, including:
+这会安装当前的 Chestnut skill 套装，包括：
 
 ```text
 style-analyzer
@@ -86,17 +86,17 @@ copy-sop
 wechat-publisher
 ```
 
-Future Chestnut skills can be added under the same `chestnut` plugin, so users keep one clear namespace.
+以后新增的视频、分镜、Hook、留存率等 Chestnut skills，也可以继续放在同一个 `chestnut` plugin 下，用户调用时会保持统一前缀。
 
-Use the HTTPS URL. The shorter `chestnutzoe/chestnut-copy-skill` form may make Claude Code try SSH, which can fail if GitHub is not already in your `known_hosts` file.
+请使用完整 HTTPS 链接。更短的 `chestnutzoe/chestnut-copy-skill` 写法可能会让 Claude Code 尝试走 SSH；如果本机还没信任 GitHub host，安装可能失败。
 
-After plugin installation, Claude Code namespaces skills as:
+安装完成后，Claude Code 会用这种格式调用 skill：
 
 ```text
 /plugin-name:skill-name
 ```
 
-For example:
+例如：
 
 ```text
 /chestnut:style-analyzer
@@ -104,9 +104,9 @@ For example:
 /chestnut:wechat-publisher
 ```
 
-If installed manually as standalone skills, use the skill names without plugin namespaces.
+如果是手动复制文件夹安装，就直接使用 skill 名字，不需要 `/chestnut:` 前缀。
 
-### Download This Repo
+### 下载这个仓库
 
 你可以用两种方式拿到文件：
 
@@ -128,7 +128,7 @@ wechat-publisher/
 
 每个文件夹都可以单独复制到你的 AI 工具 skills 目录里。
 
-### Fast Install For Claude Code
+### Claude Code 手动快速安装
 
 如果你想一次装完三个 skill，可以直接运行：
 
@@ -142,7 +142,7 @@ cp -R /tmp/chestnut-copy-skill/wechat-publisher ~/.claude/skills/
 
 如果你之后重新下载，先删除 `/tmp/chestnut-copy-skill` 或换一个临时目录。
 
-### Install All Three For Claude Code
+### Claude Code 手动安装全部
 
 把三个 skill 都装到 Claude Code：
 
@@ -161,7 +161,7 @@ cp -R wechat-publisher ~/.claude/skills/
 请使用 wechat-publisher 帮我放进公众号草稿箱
 ```
 
-### Install Only One Skill For Claude Code
+### Claude Code 只安装一个
 
 只想用爆款文案 SOP：
 
@@ -184,7 +184,7 @@ mkdir -p ~/.claude/skills
 cp -R wechat-publisher ~/.claude/skills/
 ```
 
-### Install For Codex / WorkBuddy / Other Coding Agents
+### Codex / WorkBuddy / 其他 Agent 安装
 
 如果你的工具支持本地 skills 目录，把对应文件夹复制进去即可。
 
@@ -216,9 +216,9 @@ https://github.com/chestnutzoe/chestnut-copy-skill
 请读取 copy-sop/SKILL.md，并按这个 skill 帮我写文案。
 ```
 
-## Usage
+## 使用方式
 
-### Use The Full Workflow
+### 使用完整流程
 
 用 Claude Code plugin 安装后，可以这样调用：
 
@@ -243,7 +243,7 @@ https://github.com/chestnutzoe/chestnut-copy-skill
 3. 检查公众号 API 配置、IP 白名单、封面图
 4. 只创建公众号草稿，不自动发布
 
-### Use Only 文风分析
+### 只使用文风分析
 
 ```text
 请使用 style-analyzer，读取我的公众号历史文章或本地文案，生成一份文风说明。
@@ -257,7 +257,7 @@ Claude Code plugin 调用方式：
 /chestnut:style-analyzer
 ```
 
-### Use Only 爆款文案 SOP
+### 只使用爆款文案 SOP
 
 ```text
 请使用 copy-sop，帮我判断这个选题值不值得写，并给我 3 组封面 / 标题 / Hook。
@@ -271,7 +271,7 @@ Claude Code plugin 调用方式：
 /chestnut:copy-sop
 ```
 
-### Use Only 公众号发布
+### 只使用公众号发布
 
 ```text
 请使用 wechat-publisher，帮我把这篇本地 Markdown/HTML 文章放进公众号草稿箱。
