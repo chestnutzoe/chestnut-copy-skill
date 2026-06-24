@@ -359,35 +359,116 @@ printf '%s\n' \
 
 ## 常见问题
 
-### 为什么 GitHub 上不是一个 `SKILL.md`？
+### 我应该安装哪一个？
 
-因为这是三个独立 Skill 的套装。根目录是说明书，每个子文件夹才是一个真正的 Skill。
+如果用 Claude Code，推荐直接安装完整 `chestnut` plugin：
 
-### 我只想让别人用爆款文案 SOP，必须装三个吗？
+```text
+/plugin marketplace add https://github.com/chestnutzoe/chestnut-copy-skill
+/plugin install chestnut@chestnut
+```
 
-不用。只安装 `copy-sop/` 就可以。
+安装后按需要调用：
 
-### 我想让别人读取自己的文风后再写文案，怎么装？
+```text
+/chestnut:style-analyzer
+/chestnut:copy-sop
+/chestnut:wechat-publisher
+```
 
-安装：
+如果你的工具只支持手动复制 skill 文件夹，也可以只复制你需要的子文件夹。
+
+### 我只想用爆款文案 SOP，可以吗？
+
+可以。Claude Code plugin 安装后直接用：
+
+```text
+/chestnut:copy-sop
+```
+
+手动安装时，只复制：
+
+```text
+copy-sop/
+```
+
+### 我想先生成自己的文风，再写文案，怎么用？
+
+Claude Code plugin 安装后，先运行：
+
+```text
+/chestnut:style-analyzer
+```
+
+生成 `文风说明.md` 后，再运行：
+
+```text
+/chestnut:copy-sop
+```
+
+手动安装时，复制：
 
 ```text
 style-analyzer/
 copy-sop/
 ```
 
-先生成 `文风说明.md`，再让 `copy-sop/` 读取这份文风。
+### 没有公众号 API，可以用吗？
 
-### 我想把文章放到公众号草稿箱，怎么装？
+可以。`style-analyzer` 支持读取本地 Markdown、HTML、TXT 或 JSON 文案文件；`copy-sop` 完全不需要公众号 API。
 
-安装：
+只有这两种情况需要公众号 API：
 
-```text
-wechat-publisher/
-```
+- 从公众号后台读取历史文章
+- 把文章上传到公众号草稿箱
 
-如果还需要读取公众号历史文章生成文风，再加：
+### 我想把文章放进公众号草稿箱，需要准备什么？
+
+需要准备：
 
 ```text
 style-analyzer/
+wechat-publisher/
+```
+
+或者 Claude Code plugin 安装后运行：
+
+```text
+/chestnut:wechat-publisher
+```
+
+正式上传前，还需要：
+
+- 本地配置 `WECHAT_MP_APPID`
+- 本地配置 `WECHAT_MP_APPSECRET`
+- 当前公网 IP 已加入公众号后台 IP 白名单
+- 准备好本地封面图，或已有永久素材 `thumb_media_id`
+- 确认只创建草稿，不自动发布
+
+### 这个会自动发布公众号吗？
+
+不会。默认只创建草稿，不自动群发、不定时发布。草稿创建后，需要你自己去公众号后台人工检查并发布。
+
+### 我的 AppSecret 或文风说明会被上传到 GitHub 吗？
+
+不会自动上传。这个 repo 已经把这些路径写进 `.gitignore`：
+
+```text
+.env
+.env.*
+.secrets/
+outputs/
+articles.json
+文风说明.md
+```
+
+不要把真实 AppSecret 发到聊天里，也不要手动提交到 GitHub。
+
+### Codex、WorkBuddy、其他 agent 能用吗？
+
+可以。把 GitHub 链接发给 agent，并告诉它读取对应的 `SKILL.md`：
+
+```text
+https://github.com/chestnutzoe/chestnut-copy-skill
+请读取 copy-sop/SKILL.md，并按这个 skill 帮我写文案。
 ```
