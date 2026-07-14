@@ -1,6 +1,6 @@
 {
   "name": "chestnut",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A multi-skill Chestnut creator toolkit with style analysis, copy SOP, and WeChat publishing helpers.",
   "skills": "./skills/",
   "author": {

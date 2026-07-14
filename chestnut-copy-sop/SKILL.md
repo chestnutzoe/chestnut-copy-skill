@@ -1,5 +1,5 @@
 ---
-name: copy-sop
+name: chestnut-copy-sop
 description: Use when a Chinese creator wants to write, rewrite, evaluate, or adapt copy with Zoe/Chestnut's copywriting method, especially for topic judgment, audience insight, cover/title/hook decisions, retention checks, anti-AI editing, and multi-platform copy packages.
 ---
 

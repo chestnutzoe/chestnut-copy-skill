@@ -6,9 +6,11 @@
 
 | Skill 文件夹 | 中文名 | 负责什么 | 可以单独用吗 |
 | --- | --- | --- | --- |
-| `style-analyzer/` | 文风分析 | 从公众号历史文章或本地文案里总结个人文风，生成 `文风说明.md` | 可以 |
-| `copy-sop/` | 爆款文案 SOP | 用 Zoe/Chestnut 的方法做选题、洞察、结构、封面标题 Hook、留存率和去 AI 味 | 可以 |
-| `wechat-publisher/` | 公众号发布 | 处理标题、摘要、封面预检、API/IP 前置检查，并把确认后的文章上传到公众号草稿箱 | 可以 |
+| `chestnut-style-analyzer/` | 文风分析 | 从公众号历史文章或本地文案里总结个人文风，生成 `文风说明.md` | 可以 |
+| `chestnut-copy-sop/` | 爆款文案 SOP | 用 Zoe/Chestnut 的方法做选题、洞察、结构、封面标题 Hook、留存率和去 AI 味 | 可以 |
+| `chestnut-wechat-publisher/` | 公众号发布 | 处理标题、摘要、封面预检、API/IP 前置检查，并把确认后的文章上传到公众号草稿箱 | 可以 |
+
+三个 Skill 的文件夹名和 `SKILL.md` 内部名称都以 `chestnut-` 开头，因此无论通过 Claude Code plugin 安装，还是手动复制到 Codex、WorkBuddy 或其他 Agent，都会保留统一前缀。旧名称 `style-analyzer`、`copy-sop`、`wechat-publisher` 已停用；已有安装需要更新或重新复制。
 
 ## 推荐使用方式
 
@@ -39,21 +41,21 @@
 │   └── chestnut/
 │       ├── .claude-plugin/plugin.json
 │       └── skills/
-│           ├── style-analyzer/
-│           ├── copy-sop/
-│           └── wechat-publisher/
+│           ├── chestnut-style-analyzer/
+│           ├── chestnut-copy-sop/
+│           └── chestnut-wechat-publisher/
 ├── LICENSE
 ├── README.md
-├── style-analyzer/
+├── chestnut-style-analyzer/
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
 │   ├── references/wechat-api.md
 │   └── scripts/fetch_wechat_articles.py
-├── copy-sop/
+├── chestnut-copy-sop/
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
 │   └── references/chestnut-copy-sop.md
-└── wechat-publisher/
+└── chestnut-wechat-publisher/
     ├── SKILL.md
     ├── agents/openai.yaml
     ├── references/wechat-api.md
@@ -81,9 +83,9 @@
 这会安装当前的 Chestnut skill 套装，包括：
 
 ```text
-style-analyzer
-copy-sop
-wechat-publisher
+chestnut-style-analyzer
+chestnut-copy-sop
+chestnut-wechat-publisher
 ```
 
 以后新增的视频、分镜、Hook、留存率等 Chestnut skills，也可以继续放在同一个 `chestnut` plugin 下，用户调用时会保持统一前缀。
@@ -99,9 +101,9 @@ wechat-publisher
 例如：
 
 ```text
-/chestnut:style-analyzer
-/chestnut:copy-sop
-/chestnut:wechat-publisher
+/chestnut:chestnut-style-analyzer
+/chestnut:chestnut-copy-sop
+/chestnut:chestnut-wechat-publisher
 ```
 
 如果是手动复制文件夹安装，就直接使用 skill 名字，不需要 `/chestnut:` 前缀。
@@ -121,9 +123,9 @@ cd chestnut-copy-skill
 这个仓库同时支持 Claude Code plugin 安装和手动 skill 安装。手动安装时，真正的 skill 文件夹是：
 
 ```text
-style-analyzer/
-copy-sop/
-wechat-publisher/
+chestnut-style-analyzer/
+chestnut-copy-sop/
+chestnut-wechat-publisher/
 ```
 
 每个文件夹都可以单独复制到你的 AI 工具 skills 目录里。
@@ -135,9 +137,9 @@ wechat-publisher/
 ```bash
 git clone https://github.com/chestnutzoe/chestnut-copy-skill.git /tmp/chestnut-copy-skill
 mkdir -p ~/.claude/skills
-cp -R /tmp/chestnut-copy-skill/style-analyzer ~/.claude/skills/
-cp -R /tmp/chestnut-copy-skill/copy-sop ~/.claude/skills/
-cp -R /tmp/chestnut-copy-skill/wechat-publisher ~/.claude/skills/
+cp -R /tmp/chestnut-copy-skill/chestnut-style-analyzer ~/.claude/skills/
+cp -R /tmp/chestnut-copy-skill/chestnut-copy-sop ~/.claude/skills/
+cp -R /tmp/chestnut-copy-skill/chestnut-wechat-publisher ~/.claude/skills/
 ```
 
 如果你之后重新下载，先删除 `/tmp/chestnut-copy-skill` 或换一个临时目录。
@@ -148,17 +150,17 @@ cp -R /tmp/chestnut-copy-skill/wechat-publisher ~/.claude/skills/
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R style-analyzer ~/.claude/skills/
-cp -R copy-sop ~/.claude/skills/
-cp -R wechat-publisher ~/.claude/skills/
+cp -R chestnut-style-analyzer ~/.claude/skills/
+cp -R chestnut-copy-sop ~/.claude/skills/
+cp -R chestnut-wechat-publisher ~/.claude/skills/
 ```
 
 安装后，在 Claude Code 里可以直接让它使用：
 
 ```text
-请使用 style-analyzer 帮我分析文风
-请使用 copy-sop 帮我改这篇文案
-请使用 wechat-publisher 帮我放进公众号草稿箱
+请使用 chestnut-style-analyzer 帮我分析文风
+请使用 chestnut-copy-sop 帮我改这篇文案
+请使用 chestnut-wechat-publisher 帮我放进公众号草稿箱
 ```
 
 ### Claude Code 只安装一个
@@ -167,21 +169,21 @@ cp -R wechat-publisher ~/.claude/skills/
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R copy-sop ~/.claude/skills/
+cp -R chestnut-copy-sop ~/.claude/skills/
 ```
 
 只想分析文风：
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R style-analyzer ~/.claude/skills/
+cp -R chestnut-style-analyzer ~/.claude/skills/
 ```
 
 只想上传公众号草稿：
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R wechat-publisher ~/.claude/skills/
+cp -R chestnut-wechat-publisher ~/.claude/skills/
 ```
 
 ### Codex / WorkBuddy / 其他 Agent 安装
@@ -199,9 +201,9 @@ cp -R wechat-publisher ~/.claude/skills/
 
 ```bash
 mkdir -p ~/.agents/skills
-cp -R style-analyzer ~/.agents/skills/
-cp -R copy-sop ~/.agents/skills/
-cp -R wechat-publisher ~/.agents/skills/
+cp -R chestnut-style-analyzer ~/.agents/skills/
+cp -R chestnut-copy-sop ~/.agents/skills/
+cp -R chestnut-wechat-publisher ~/.agents/skills/
 ```
 
 如果你的 agent 不能直接安装 skill，也可以把这个 GitHub 链接发给它，让它读取你要用的子文件夹：
@@ -213,7 +215,7 @@ https://github.com/chestnutzoe/chestnut-copy-skill
 并明确告诉它从哪个文件开始：
 
 ```text
-请读取 copy-sop/SKILL.md，并按这个 skill 帮我写文案。
+请读取 chestnut-copy-sop/SKILL.md，并按这个 skill 帮我写文案。
 ```
 
 ## 使用方式
@@ -223,17 +225,17 @@ https://github.com/chestnutzoe/chestnut-copy-skill
 用 Claude Code plugin 安装后，可以这样调用：
 
 ```text
-/chestnut:style-analyzer
-/chestnut:copy-sop
-/chestnut:wechat-publisher
+/chestnut:chestnut-style-analyzer
+/chestnut:chestnut-copy-sop
+/chestnut:chestnut-wechat-publisher
 ```
 
 完整工作流可以这样告诉 agent：
 
 ```text
-请先用 /chestnut:style-analyzer 读取我的历史文案，生成文风说明；
-再用 /chestnut:copy-sop 帮我写公众号母稿和封面标题 Hook；
-最后用 /chestnut:wechat-publisher 帮我检查标题、摘要、封面，并放进公众号草稿箱。
+请先用 /chestnut:chestnut-style-analyzer 读取我的历史文案，生成文风说明；
+再用 /chestnut:chestnut-copy-sop 帮我写公众号母稿和封面标题 Hook；
+最后用 /chestnut:chestnut-wechat-publisher 帮我检查标题、摘要、封面，并放进公众号草稿箱。
 ```
 
 完整流程会做：
@@ -246,7 +248,7 @@ https://github.com/chestnutzoe/chestnut-copy-skill
 ### 只使用文风分析
 
 ```text
-请使用 style-analyzer，读取我的公众号历史文章或本地文案，生成一份文风说明。
+请使用 chestnut-style-analyzer，读取我的公众号历史文章或本地文案，生成一份文风说明。
 ```
 
 如果用户没有公众号 API，也可以让它读取本地 Markdown、HTML、TXT 或 JSON 文件。
@@ -254,13 +256,13 @@ https://github.com/chestnutzoe/chestnut-copy-skill
 Claude Code plugin 调用方式：
 
 ```text
-/chestnut:style-analyzer
+/chestnut:chestnut-style-analyzer
 ```
 
 ### 只使用爆款文案 SOP
 
 ```text
-请使用 copy-sop，帮我判断这个选题值不值得写，并给我 3 组封面 / 标题 / Hook。
+请使用 chestnut-copy-sop，帮我判断这个选题值不值得写，并给我 3 组封面 / 标题 / Hook。
 ```
 
 它可以单独用；如果已经有 `文风说明.md`，效果会更像用户本人。
@@ -268,19 +270,19 @@ Claude Code plugin 调用方式：
 Claude Code plugin 调用方式：
 
 ```text
-/chestnut:copy-sop
+/chestnut:chestnut-copy-sop
 ```
 
 ### 只使用公众号发布
 
 ```text
-请使用 wechat-publisher，帮我把这篇本地 Markdown/HTML 文章放进公众号草稿箱。
+请使用 chestnut-wechat-publisher，帮我把这篇本地 Markdown/HTML 文章放进公众号草稿箱。
 ```
 
 Claude Code plugin 调用方式：
 
 ```text
-/chestnut:wechat-publisher
+/chestnut:chestnut-wechat-publisher
 ```
 
 在真正上传前，它应该先确认：
@@ -295,8 +297,8 @@ Claude Code plugin 调用方式：
 
 只有这两种情况需要公众号凭证：
 
-- `style-analyzer/` 要从公众号后台读取历史文章；
-- `wechat-publisher/` 要把文章上传到公众号草稿箱。
+- `chestnut-style-analyzer/` 要从公众号后台读取历史文章；
+- `chestnut-wechat-publisher/` 要把文章上传到公众号草稿箱。
 
 本地长期配置推荐创建一个不会进 Git 的密钥文件：
 
@@ -324,7 +326,7 @@ printf '%s\n' \
 
 ## 公众号发布前置检查
 
-`wechat-publisher/` 在真正调用公众号 API 前，必须确认：
+`chestnut-wechat-publisher/` 在真正调用公众号 API 前，必须确认：
 
 - 本地已经配置 `WECHAT_MP_APPID`
 - 本地已经配置 `WECHAT_MP_APPSECRET`
@@ -371,9 +373,9 @@ printf '%s\n' \
 安装后按需要调用：
 
 ```text
-/chestnut:style-analyzer
-/chestnut:copy-sop
-/chestnut:wechat-publisher
+/chestnut:chestnut-style-analyzer
+/chestnut:chestnut-copy-sop
+/chestnut:chestnut-wechat-publisher
 ```
 
 如果你的工具只支持手动复制 skill 文件夹，也可以只复制你需要的子文件夹。
@@ -383,13 +385,13 @@ printf '%s\n' \
 可以。Claude Code plugin 安装后直接用：
 
 ```text
-/chestnut:copy-sop
+/chestnut:chestnut-copy-sop
 ```
 
 手动安装时，只复制：
 
 ```text
-copy-sop/
+chestnut-copy-sop/
 ```
 
 ### 我想先生成自己的文风，再写文案，怎么用？
@@ -397,25 +399,25 @@ copy-sop/
 Claude Code plugin 安装后，先运行：
 
 ```text
-/chestnut:style-analyzer
+/chestnut:chestnut-style-analyzer
 ```
 
 生成 `文风说明.md` 后，再运行：
 
 ```text
-/chestnut:copy-sop
+/chestnut:chestnut-copy-sop
 ```
 
 手动安装时，复制：
 
 ```text
-style-analyzer/
-copy-sop/
+chestnut-style-analyzer/
+chestnut-copy-sop/
 ```
 
 ### 没有公众号 API，可以用吗？
 
-可以。`style-analyzer` 支持读取本地 Markdown、HTML、TXT 或 JSON 文案文件；`copy-sop` 完全不需要公众号 API。
+可以。`chestnut-style-analyzer` 支持读取本地 Markdown、HTML、TXT 或 JSON 文案文件；`chestnut-copy-sop` 完全不需要公众号 API。
 
 只有这两种情况需要公众号 API：
 
@@ -427,14 +429,14 @@ copy-sop/
 需要准备：
 
 ```text
-style-analyzer/
-wechat-publisher/
+chestnut-style-analyzer/
+chestnut-wechat-publisher/
 ```
 
 或者 Claude Code plugin 安装后运行：
 
 ```text
-/chestnut:wechat-publisher
+/chestnut:chestnut-wechat-publisher
 ```
 
 正式上传前，还需要：
@@ -470,5 +472,5 @@ articles.json
 
 ```text
 https://github.com/chestnutzoe/chestnut-copy-skill
-请读取 copy-sop/SKILL.md，并按这个 skill 帮我写文案。
+请读取 chestnut-copy-sop/SKILL.md，并按这个 skill 帮我写文案。
 ```

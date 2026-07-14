@@ -1,5 +1,5 @@
 ---
-name: style-analyzer
+name: chestnut-style-analyzer
 description: Use when a creator wants to analyze their own writing voice from historical copy, especially WeChat Official Account articles or local Markdown, HTML, TXT, or JSON exports, and produce a reusable style guide for future copywriting.
 ---
 

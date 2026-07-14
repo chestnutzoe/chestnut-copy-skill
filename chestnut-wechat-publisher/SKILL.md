@@ -1,5 +1,5 @@
 ---
-name: wechat-publisher
+name: chestnut-wechat-publisher
 description: Use when a creator has an approved local Markdown or HTML article and wants to prepare title, digest, cover handling, WeChat API credential/IP preflight, and Official Account draft-box upload for manual backend review.
 ---
 
