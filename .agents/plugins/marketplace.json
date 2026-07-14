@@ -1,0 +1,20 @@
+{
+  "name": "chestnut",
+  "interface": {
+    "displayName": "Chestnut"
+  },
+  "plugins": [
+    {
+      "name": "chestnut",
+      "source": {
+        "source": "local",
+        "path": "./plugins/chestnut"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "chestnut",
+  "version": "2.0.0",
+  "description": "Chestnut creator toolkit for style analysis, copy development, and WeChat draft publishing.",
+  "author": {
+    "name": "chestnutzoe",
+    "url": "https://github.com/chestnutzoe"
+  },
+  "homepage": "https://github.com/chestnutzoe/chestnut-copy-skill",
+  "repository": "https://github.com/chestnutzoe/chestnut-copy-skill",
+  "license": "MIT",
+  "keywords": ["chestnut", "copywriting", "wechat", "creator", "content"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Chestnut",
+    "shortDescription": "Chestnut 的中文创作者文案与公众号工作流。",
+    "longDescription": "分析个人文风、判断和优化内容选题与文案，并在确认后把文章放入微信公众号草稿箱。",
+    "developerName": "chestnutzoe",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "defaultPrompt": [
+      "分析我的历史文案，生成一份个人文风说明。",
+      "判断这个选题，并产出封面、标题、Hook 和正文。",
+      "检查文章并把确认后的版本放进公众号草稿箱。"
+    ]
+  }
+}

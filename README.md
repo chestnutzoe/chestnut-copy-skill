@@ -35,11 +35,14 @@
 
 ```text
 .
+├── .agents/
+│   └── plugins/marketplace.json       # Codex marketplace
 ├── .claude-plugin/
-│   └── marketplace.json
+│   └── marketplace.json               # Claude Code marketplace
 ├── plugins/
 │   └── chestnut/
 │       ├── .claude-plugin/plugin.json
+│       ├── .codex-plugin/plugin.json
 │       └── skills/
 │           ├── chestnut-style-analyzer/
 │           ├── chestnut-copy-sop/
@@ -63,6 +66,8 @@
 ```
 
 ## 安装方式
+
+这个仓库同时是 Claude Code 原生 Plugin 和 Codex 原生 Plugin。两边安装后读取同一套 `plugins/chestnut/skills/`，不会维护两套不同的 Plugin 内容。
 
 ### Claude Code Marketplace 安装
 
@@ -186,7 +191,23 @@ mkdir -p ~/.claude/skills
 cp -R chestnut-wechat-publisher ~/.claude/skills/
 ```
 
-### Codex / WorkBuddy / 其他 Agent 安装
+### Codex 原生 Plugin 安装
+
+先把 GitHub 仓库添加为 Codex marketplace：
+
+```bash
+codex plugin marketplace add chestnutzoe/chestnut-copy-skill
+```
+
+再安装 `chestnut` Plugin：
+
+```bash
+codex plugin add chestnut@chestnut
+```
+
+也可以进入 Codex 后运行 `/plugins`，在 `chestnut` marketplace 中安装。安装完成后请新建一个任务，让 Codex 重新加载 Plugin 中的 Skills。
+
+### Codex / WorkBuddy / 其他 Agent 手动安装
 
 如果你的工具支持本地 skills 目录，把对应文件夹复制进去即可。
 
@@ -217,6 +238,24 @@ https://github.com/chestnutzoe/chestnut-copy-skill
 ```text
 请读取 chestnut-copy-sop/SKILL.md，并按这个 skill 帮我写文案。
 ```
+
+### 更新 Plugin
+
+Claude Code 用户可以运行：
+
+```text
+/plugin marketplace update chestnut
+/plugin update chestnut@chestnut
+```
+
+Codex 用户可以运行：
+
+```bash
+codex plugin marketplace upgrade chestnut
+codex plugin add chestnut@chestnut
+```
+
+更新后请在 Claude Code 中运行 `/reload-plugins`，或在 Codex 中新建一个任务。
 
 ## 使用方式
 
