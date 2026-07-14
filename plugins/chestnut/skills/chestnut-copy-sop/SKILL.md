@@ -54,6 +54,7 @@ That file contains the detailed workflow:
 
 ## Core Rules
 
+- Assume the user is a writing beginner unless their request shows otherwise. Do not expect them to know terms such as topic gate, hook mechanism, retention pull, or full diagnosis.
 - When the user provides a script, transcript, or draft for feedback, diagnose before rewriting.
 - Identify what must be preserved before suggesting what should change.
 - Prefer targeted, sentence-level edits. Do not rewrite for the sake of rewriting.
@@ -65,7 +66,14 @@ That file contains the detailed workflow:
 - When the content may become video or short-form, include a retention scan.
 - Never silently skip the next workflow stage. End with the current stage and one concrete next-step reminder.
 
-When responding to an existing draft, adapt the depth and format to the user's request. Do not force a full diagnostic report for a simple proofreading request. Do not output a full rewrite unless the user asks for one or the diagnosed structure cannot be repaired locally.
+When responding to an existing draft, adapt the depth and format to the user's request:
+
+- If the user asks for analysis, diagnosis, audience attraction, publishing risk, or a pre-publish check, provide a thorough diagnosis.
+- If the user asks to smooth, proofread, tighten, or lightly edit without major changes, make concise local edits.
+- If the user only says "帮我看看" or the desired depth is unclear, give a useful quick judgment first, then ask whether they want a full diagnosis. Explain in plain language that a full diagnosis checks content appeal, audience pain, cover/title/opening alignment, likely drop points, what must stay, and what should change.
+- If a serious risk is already obvious, flag the single most important red light before asking. Do not hide a material problem behind the user's uncertainty.
+
+Do not force a full diagnostic report for a simple proofreading request. Do not output a full rewrite unless the user asks for one or the diagnosed structure cannot be repaired locally.
 
 ## Default Output Package
 

@@ -70,6 +70,8 @@ Replace:
 
 ## Step 0: Intake
 
+Assume the user is a writing beginner unless their request clearly shows otherwise. Use plain language and do not require them to understand internal workflow names or copywriting terminology.
+
 The user may provide:
 
 - a fragment,
@@ -83,6 +85,20 @@ The user may provide:
 Do not jump into final copy. Identify what decision is needed from the user's material and request.
 
 When the user provides a script, transcript, or draft, diagnose before rewriting. First identify what is already working and what must remain. Do not treat every sentence as something that needs improvement, and do not force a full report when the user only needs a light proofread.
+
+Choose the depth from the user's wording:
+
+- `分析 / 诊断 / 有没有吸引力 / 有什么风险 / 发布前检查` -> give a thorough diagnosis.
+- `顺一下 / 润色 / 改顺 / 精准一点 / 不要大改` -> make concise local edits.
+- `帮我看看 / 看一下这个` with no clear depth -> give a quick useful judgment first, then ask whether the user wants a full diagnosis.
+
+Do not ask only `要不要完整诊断？` Explain what the option means in beginner-friendly language:
+
+```text
+我可以继续做一次完整检查：看看这条最吸引人的点够不够强、选的痛点是不是最值得讲、标题封面和开头是否一致、观众可能在哪里划走，以及哪些内容一定要保留。你需要我继续吗？
+```
+
+If a serious problem is already obvious, state the single highest-priority red light before asking. The question must not prevent useful feedback or conceal material publishing risk.
 
 ## Step 1: Simplified Topic Gate
 
