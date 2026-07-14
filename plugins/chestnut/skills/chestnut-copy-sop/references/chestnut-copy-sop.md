@@ -80,12 +80,9 @@ The user may provide:
 - a transcript,
 - a vague content idea.
 
-Do not jump into final copy. Identify what decision is needed first, then choose one mode:
+Do not jump into final copy. Identify what decision is needed from the user's material and request.
 
-- **Create Mode**: use when the user has an idea, fragment, voice note, or blank page and wants to develop content.
-- **Review Mode**: use when the user provides a script, transcript, or draft and wants feedback, diagnosis, proofreading, or precise improvement.
-
-In Review Mode, diagnose before rewriting. First identify what is already working and what must remain. Do not treat every sentence as something that needs improvement.
+When the user provides a script, transcript, or draft, diagnose before rewriting. First identify what is already working and what must remain. Do not treat every sentence as something that needs improvement, and do not force a full report when the user only needs a light proofread.
 
 ## Step 1: Simplified Topic Gate
 
@@ -320,19 +317,15 @@ After drafting, diagnose and improve:
 
 Give targeted edits before a full rewrite when the user provided a draft.
 
-### Review Mode Required Order
+For an existing script, transcript, or draft:
 
-When the user provides a script, transcript, or draft, return feedback in this order:
+- surface the strongest reason someone may watch or read,
+- say what should be preserved before proposing changes,
+- diagnose only the risks relevant to the user's request,
+- prioritize changes that materially improve comprehension, attraction, retention, accuracy, or voice,
+- provide sentence-level alternatives while preserving intent and speaking rhythm.
 
-1. **一句话判断**: the strongest reason someone may watch or read.
-2. **内容风险**: topic, audience, promise, and mainline risks.
-3. **包装风险**: whether cover, title, and opening share one promise and use the right psychological mechanism.
-4. **留存风险**: likely drop point, cold-viewer issue, progression issue, or overload.
-5. **必须保留**: the user's strongest point of view, lived detail, phrasing, or structural choice.
-6. **优先修改**: only changes that materially improve comprehension, attraction, retention, accuracy, or voice.
-7. **具体替换**: provide sentence-level alternatives while preserving the user's intent and speaking rhythm.
-
-Do not provide a full rewritten transcript by default. Rewrite the whole piece only when the user asks or when local edits cannot repair the structure.
+Do not provide a full rewritten transcript by default. Rewrite the whole piece only when the user asks or when local edits cannot repair the structure. Let the response feel like useful editorial feedback, not a mandatory template.
 
 ## Step 10: Output Package
 
@@ -350,20 +343,9 @@ For final deliverables, provide what the task needs:
 - platform adaptation notes,
 - publishing checklist.
 
-## Step 11: Stage Reminder
+## Step 11: Next-Step Reminder
 
-Never assume the user will remember the next workflow step. End Create Mode and Review Mode with a compact progress check containing only relevant stages:
-
-```text
-当前进度：
-✓ / □ 内容角度
-✓ / □ 逐字稿或母稿
-✓ / □ 标题 / 封面 / Hook
-✓ / □ 发布前数据预检
-□ 发布后数据复盘
-```
-
-Then recommend exactly one next action based on the current stage:
+Never assume the user will remember the next workflow step. Infer the current stage, then recommend exactly one next action when a meaningful step is still missing:
 
 - idea only -> confirm the angle,
 - draft in progress -> confirm what must be preserved,

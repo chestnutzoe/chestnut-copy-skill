@@ -37,7 +37,7 @@ Read `references/chestnut-copy-sop.md` when writing, rewriting, evaluating, or a
 
 That file contains the detailed workflow:
 
-- create mode vs review mode,
+- input-aware drafting and feedback,
 - topic gate,
 - audience insight,
 - pain-point sorting,
@@ -54,8 +54,8 @@ That file contains the detailed workflow:
 
 ## Core Rules
 
-- When the user provides a script, transcript, or draft for feedback, enter **Review Mode**. Diagnose before rewriting.
-- In Review Mode, identify what must be preserved before suggesting what should change.
+- When the user provides a script, transcript, or draft for feedback, diagnose before rewriting.
+- Identify what must be preserved before suggesting what should change.
 - Prefer targeted, sentence-level edits. Do not rewrite for the sake of rewriting.
 - Do not jump straight to final copy when the angle is weak.
 - Do not let the user skip cover/title/hook decisions; this is where many creators lose reach.
@@ -65,24 +65,7 @@ That file contains the detailed workflow:
 - When the content may become video or short-form, include a retention scan.
 - Never silently skip the next workflow stage. End with the current stage and one concrete next-step reminder.
 
-## Operating Modes
-
-Choose one mode from the user's material and request:
-
-- **Create Mode**: the user has an idea, fragment, voice note, or blank page and wants to develop content.
-- **Review Mode**: the user has a script, transcript, or draft and wants feedback, diagnosis, proofreading, or precise improvement.
-
-In Review Mode, use this fixed order:
-
-1. strongest audience pull,
-2. topic and audience risk,
-3. cover/title/hook diagnosis,
-4. retention diagnosis,
-5. what must be preserved,
-6. priority edits with specific replacement lines,
-7. current stage and next-step reminder.
-
-Do not output a full rewrite unless the user asks for one or the diagnosed structure cannot be repaired locally.
+When responding to an existing draft, adapt the depth and format to the user's request. Do not force a full diagnostic report for a simple proofreading request. Do not output a full rewrite unless the user asks for one or the diagnosed structure cannot be repaired locally.
 
 ## Default Output Package
 
@@ -136,20 +119,9 @@ When the draft may become video or short-form content, include:
 - missing narrative pulls,
 - 3 concrete fixes.
 
-## Workflow Completion Reminder
+## Next-Step Reminder
 
-At the end of Create Mode or Review Mode, show only the stages relevant to the task:
-
-```text
-当前进度：
-✓ / □ 内容角度
-✓ / □ 逐字稿或母稿
-✓ / □ 标题 / 封面 / Hook
-✓ / □ 发布前数据预检
-□ 发布后数据复盘
-```
-
-Then give one next action. Do not dump every possible next step on the user.
+At the end, infer the current workflow stage and give one useful next action when a meaningful step is still missing. Do not show a mandatory progress report, and do not dump every possible next step on the user.
 
 ## Publishing Boundary
 
