@@ -7,7 +7,7 @@
 | Skill 文件夹 | 中文名 | 负责什么 | 可以单独用吗 |
 | --- | --- | --- | --- |
 | `chestnut-style-analyzer/` | 文风分析 | 从公众号历史文章或本地文案里总结个人文风，生成 `文风说明.md` | 可以 |
-| `chestnut-copy-sop/` | 爆款文案 SOP | 用 Zoe/Chestnut 的方法做选题、洞察、结构、封面标题 Hook、留存率和去 AI 味 | 可以 |
+| `chestnut-copy-sop/` | 爆款文案 SOP | 写作或诊断逐字稿：检查内容吸引力、标题封面 Hook、留存和表达风险，并做精准改稿 | 可以 |
 | `chestnut-wechat-publisher/` | 公众号发布 | 处理标题、摘要、封面预检、API/IP 前置检查，并把确认后的文章上传到公众号草稿箱 | 可以 |
 
 三个 Skill 的文件夹名和 `SKILL.md` 内部名称都以 `chestnut-` 开头，因此无论通过 Claude Code plugin 安装，还是手动复制到 Codex、WorkBuddy 或其他 Agent，都会保留统一前缀。旧名称 `style-analyzer`、`copy-sop`、`wechat-publisher` 已停用；已有安装需要更新或重新复制。
@@ -26,7 +26,7 @@
    负责“像不像你”。推荐读取公众号历史母稿，也支持本地 Markdown、HTML、TXT、JSON 文案。
 
 2. **爆款文案 SOP**
-   负责“有没有传播力”。重点是选题判断、用户洞察、痛点、结构、封面标题 Hook、人味注入、去 AI 味、留存率检查。
+   负责“有没有传播力”。既可以从零写作，也可以进入 Review Mode 诊断现有逐字稿：先判断哪里值得保留，再检查选题、痛点、标题封面 Hook、留存和表达风险，只修改真正影响结果的部分。
 
 3. **公众号发布**
    负责“怎么落地”。重点是标题、摘要、封面、公众号 API 配置检查、IP 白名单检查、草稿箱上传和发布前人工审核。

@@ -80,9 +80,14 @@ The user may provide:
 - a transcript,
 - a vague content idea.
 
-Do not jump into final copy. Identify what decision is needed first.
+Do not jump into final copy. Identify what decision is needed first, then choose one mode:
 
-## Step 1: Topic Gate
+- **Create Mode**: use when the user has an idea, fragment, voice note, or blank page and wants to develop content.
+- **Review Mode**: use when the user provides a script, transcript, or draft and wants feedback, diagnosis, proofreading, or precise improvement.
+
+In Review Mode, diagnose before rewriting. First identify what is already working and what must remain. Do not treat every sentence as something that needs improvement.
+
+## Step 1: Simplified Topic Gate
 
 Before drafting, judge whether the idea should become content now.
 
@@ -101,6 +106,12 @@ If multiple directions are viable, give 2-4 options with:
 - recommended platform/form.
 
 Stop for user confirmation when changing the audience, argument, or personal story would change the whole piece.
+
+Keep this gate compact. It is a baseline editorial decision, not a full research report. Check only:
+
+- why the audience should care now,
+- the strongest specific value, tension, or discovery in the material,
+- what creator experience, proof, or judgment makes this version distinct.
 
 ## Step 2: Audience Insight
 
@@ -184,6 +195,32 @@ Do not treat cover/title/hook as decoration at the end. Force the user to think 
 | Title | make people click / open | Is the conflict or promise clear? |
 | Hook | make people continue | Does the first 3-10 seconds create forward pull? |
 
+All three must make the same core promise. A strong cover cannot rescue a title and opening that lead somewhere else.
+
+### Psychological Starting Mechanism
+
+Before writing combinations, decide what should make the audience react:
+
+- pain recognition,
+- curiosity gap,
+- risk warning,
+- contrarian belief,
+- desired result,
+- vulnerability,
+- identity call-out,
+- another mechanism justified by the material.
+
+Do not select a mechanism because it sounds dramatic. Select it because it matches the audience's current psychology and the content can fulfill the promise.
+
+If the mechanism is pain recognition, run a pain-priority test:
+
+1. List the 2-3 plausible pains inside this topic.
+2. Ask which pain is most urgent, specific, and actionable for the target audience.
+3. Prefer the pain with the highest stopping power that the content can genuinely resolve.
+4. State why it was selected and what risk the weaker pains carry.
+
+Do not default to the broadest pain or the easiest pain to phrase.
+
 ### Required Output
 
 Create 3 cover/title/hook combinations. Each combination must have:
@@ -247,6 +284,16 @@ Scan:
 - Retention review: after publishing, use the retention curve to identify drop points.
 - Human language: rewrite lecture/summary tone into first-person scene or real talk.
 
+### Three Baseline Red Flags
+
+Keep the embedded retention check lightweight, but always scan these three high-impact risks:
+
+1. **Cold viewer**: if this is the audience's first exposure to the creator, can they understand the problem and reason to stay within the opening?
+2. **Problem chain**: does each section answer the previous question and create the next one, or does the draft feel like a parallel list or course outline?
+3. **Mainline overload**: is the piece trying to carry too many useful branches, causing the central promise to disappear?
+
+If any red flag is active, mark it clearly and give a concrete repair. Do not expand this embedded check into a full analytics or post-publish review.
+
 ### Required Output
 
 Before final delivery, include:
@@ -273,6 +320,20 @@ After drafting, diagnose and improve:
 
 Give targeted edits before a full rewrite when the user provided a draft.
 
+### Review Mode Required Order
+
+When the user provides a script, transcript, or draft, return feedback in this order:
+
+1. **一句话判断**: the strongest reason someone may watch or read.
+2. **内容风险**: topic, audience, promise, and mainline risks.
+3. **包装风险**: whether cover, title, and opening share one promise and use the right psychological mechanism.
+4. **留存风险**: likely drop point, cold-viewer issue, progression issue, or overload.
+5. **必须保留**: the user's strongest point of view, lived detail, phrasing, or structural choice.
+6. **优先修改**: only changes that materially improve comprehension, attraction, retention, accuracy, or voice.
+7. **具体替换**: provide sentence-level alternatives while preserving the user's intent and speaking rhythm.
+
+Do not provide a full rewritten transcript by default. Rewrite the whole piece only when the user asks or when local edits cannot repair the structure.
+
 ## Step 10: Output Package
 
 For final deliverables, provide what the task needs:
@@ -288,6 +349,29 @@ For final deliverables, provide what the task needs:
 - retention risk and fixes,
 - platform adaptation notes,
 - publishing checklist.
+
+## Step 11: Stage Reminder
+
+Never assume the user will remember the next workflow step. End Create Mode and Review Mode with a compact progress check containing only relevant stages:
+
+```text
+当前进度：
+✓ / □ 内容角度
+✓ / □ 逐字稿或母稿
+✓ / □ 标题 / 封面 / Hook
+✓ / □ 发布前数据预检
+□ 发布后数据复盘
+```
+
+Then recommend exactly one next action based on the current stage:
+
+- idea only -> confirm the angle,
+- draft in progress -> confirm what must be preserved,
+- final draft before filming -> run a pre-publish data check,
+- filmed but not published -> check the opening, rhythm, and cuttable sections,
+- published -> return with performance screenshots or a retention curve for review.
+
+Do not list every next action at once.
 
 If requested, prepare the WeChat draft box upload, but do not publish automatically. A real WeChat draft needs either a local cover image path or an existing permanent-material `thumb_media_id`.
 

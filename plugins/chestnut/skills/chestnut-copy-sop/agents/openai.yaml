@@ -1,4 +1,4 @@
 interface:
   display_name: Chestnut 爆款文案 SOP
-  short_description: Zoe/Chestnut 的爆款文案方法：选题、洞察、结构、封面标题 Hook、留存率和去 AI 味。
-  default_prompt: 用爆款文案 SOP 帮我判断这个选题，并产出封面标题 Hook 和可发布文案。
+  short_description: 写作或诊断逐字稿：判断内容吸引力、包装、留存和表达风险，并做精准改稿。
+  default_prompt: 用 Chestnut Copy SOP 帮我写内容，或诊断这份逐字稿并只修改真正影响表达和数据的地方。

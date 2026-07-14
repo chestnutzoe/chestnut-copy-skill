@@ -1,6 +1,12 @@
 ---
 name: chestnut-copy-sop
-description: Use when a Chinese creator wants to write, rewrite, evaluate, or adapt copy with Zoe/Chestnut's copywriting method, especially for topic judgment, audience insight, cover/title/hook decisions, retention checks, anti-AI editing, and multi-platform copy packages.
+description: >-
+  Use when a Chinese creator wants to write, rewrite, evaluate, or adapt copy
+  with Zoe/Chestnut's copywriting method. Also use to review an existing
+  script, transcript, or draft before filming or publishing: diagnose what
+  attracts viewers, topic and audience risks, cover/title/hook alignment,
+  retention risks, off-voice lines, and precise edits without rewriting for
+  the sake of rewriting.
 ---
 
 # 爆款文案 SOP
@@ -31,6 +37,7 @@ Read `references/chestnut-copy-sop.md` when writing, rewriting, evaluating, or a
 
 That file contains the detailed workflow:
 
+- create mode vs review mode,
 - topic gate,
 - audience insight,
 - pain-point sorting,
@@ -47,12 +54,35 @@ That file contains the detailed workflow:
 
 ## Core Rules
 
+- When the user provides a script, transcript, or draft for feedback, enter **Review Mode**. Diagnose before rewriting.
+- In Review Mode, identify what must be preserved before suggesting what should change.
+- Prefer targeted, sentence-level edits. Do not rewrite for the sake of rewriting.
 - Do not jump straight to final copy when the angle is weak.
 - Do not let the user skip cover/title/hook decisions; this is where many creators lose reach.
 - Do not fabricate personal stories.
 - Keep the user's point of view, lived scenes, and final judgment visible.
 - Keep voice and layout separate.
 - When the content may become video or short-form, include a retention scan.
+- Never silently skip the next workflow stage. End with the current stage and one concrete next-step reminder.
+
+## Operating Modes
+
+Choose one mode from the user's material and request:
+
+- **Create Mode**: the user has an idea, fragment, voice note, or blank page and wants to develop content.
+- **Review Mode**: the user has a script, transcript, or draft and wants feedback, diagnosis, proofreading, or precise improvement.
+
+In Review Mode, use this fixed order:
+
+1. strongest audience pull,
+2. topic and audience risk,
+3. cover/title/hook diagnosis,
+4. retention diagnosis,
+5. what must be preserved,
+6. priority edits with specific replacement lines,
+7. current stage and next-step reminder.
+
+Do not output a full rewrite unless the user asks for one or the diagnosed structure cannot be repaired locally.
 
 ## Default Output Package
 
@@ -83,6 +113,10 @@ Create 3 combinations. Each combination must include:
 - best use,
 - risk.
 
+Before creating combinations, choose the psychological starting mechanism: pain recognition, curiosity gap, risk warning, contrarian belief, desired result, vulnerability, identity call-out, or another justified mechanism.
+
+If using pain recognition, first test whether this is the audience's most urgent and actionable pain for this topic. Do not choose a pain merely because it is easy to phrase. Compare plausible pains and explain why the selected one has the strongest stopping power.
+
 Then ask:
 
 ```text
@@ -95,9 +129,27 @@ When the draft may become video or short-form content, include:
 
 - retention risk: high / medium / low,
 - predicted drop point,
+- cold-viewer comprehension risk,
+- problem-chain vs list-like progression,
+- mainline overload or removable branches,
 - active narrative pulls,
 - missing narrative pulls,
 - 3 concrete fixes.
+
+## Workflow Completion Reminder
+
+At the end of Create Mode or Review Mode, show only the stages relevant to the task:
+
+```text
+当前进度：
+✓ / □ 内容角度
+✓ / □ 逐字稿或母稿
+✓ / □ 标题 / 封面 / Hook
+✓ / □ 发布前数据预检
+□ 发布后数据复盘
+```
+
+Then give one next action. Do not dump every possible next step on the user.
 
 ## Publishing Boundary
 
