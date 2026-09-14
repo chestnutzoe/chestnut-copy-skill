@@ -1,6 +1,21 @@
-# Chestnut Copy Skill Set
+# Chestnut Plugin
 
-这是 Zoe / Chestnut 的中文创作者文案 Skill 套装。
+这是 Zoe / Chestnut 的个人品牌与创作工具箱。沿用原来的仓库地址和 `chestnut` 插件名，已安装的用户更新即可。
+
+## 新增四个 Skill（2.2.0）
+
+| Skill | 产出 |
+| --- | --- |
+| [chestnut-brand-story](plugins/chestnut/skills/chestnut-brand-story/SKILL.md) | 从真实经历梳理个人品牌故事，形成文章或口播初稿 |
+| [chestnut-positioning-statement](plugins/chestnut/skills/chestnut-positioning-statement/SKILL.md) | 一句话暂定定位，以受众和真实经验为依据，不强迫选择单一赛道 |
+| [chestnut-brand-guidance](plugins/chestnut/skills/chestnut-brand-guidance/SKILL.md) | 从 Moodboard、作品和文案整理品牌表达指南，供网站、封面、视频及写作共同使用 |
+| [chestnut-product-brief](plugins/chestnut/skills/chestnut-product-brief/SKILL.md) | 产品说明书：适合谁、价值、价格、交付与边界 |
+
+加上下面三个文案工具，插件现在共 **7 个 Skill**。按需要选，不要求全部按顺序使用。新增四个都是独立公开版，使用你自己的材料，不需要作者的私人文件或课程权限。
+
+不想安装整包：打开上表对应的 Skill，把页面链接发给能读取 GitHub 的 AI agent，说明要用它完成什么。若工具读不了链接，可以下载该文件；链接读取不等于所有 AI 都支持插件安装或联网。
+
+新增 Skill 的手动安装源在 `plugins/chestnut/skills/`。下方根目录的三个文件夹保留，兼容之前的文案工具链接；安装全部 7 个请使用插件入口。
 
 它是一个统一的 `chestnut` Claude Code plugin，里面包含多个 Chestnut skills。手动安装时，这些 skill 也可以单独复制使用：
 
@@ -46,7 +61,11 @@
 │       └── skills/
 │           ├── chestnut-style-analyzer/
 │           ├── chestnut-copy-sop/
-│           └── chestnut-wechat-publisher/
+│           ├── chestnut-wechat-publisher/
+│           ├── chestnut-brand-story/
+│           ├── chestnut-positioning-statement/
+│           ├── chestnut-brand-guidance/
+│           └── chestnut-product-brief/
 ├── LICENSE
 ├── README.md
 ├── chestnut-style-analyzer/
@@ -85,12 +104,16 @@
 /plugin install chestnut@chestnut
 ```
 
-这会安装当前的 Chestnut skill 套装，包括：
+这会安装全部 7 个 Skill：
 
 ```text
 chestnut-style-analyzer
 chestnut-copy-sop
 chestnut-wechat-publisher
+chestnut-brand-story
+chestnut-positioning-statement
+chestnut-brand-guidance
+chestnut-product-brief
 ```
 
 以后新增的视频、分镜、Hook、留存率等 Chestnut skills，也可以继续放在同一个 `chestnut` plugin 下，用户调用时会保持统一前缀。

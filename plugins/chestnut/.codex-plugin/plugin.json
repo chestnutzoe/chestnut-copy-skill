@@ -1,7 +1,7 @@
 {
   "name": "chestnut",
-  "version": "2.1.2",
-  "description": "Chestnut creator toolkit for style analysis, copy development, and WeChat draft publishing.",
+  "version": "2.2.0",
+  "description": "Chestnut toolkit for personal branding, storytelling, brand guidance, product briefs, copywriting, and WeChat drafts.",
   "author": {
     "name": "chestnutzoe",
     "url": "https://github.com/chestnutzoe"
@@ -13,8 +13,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Chestnut",
-    "shortDescription": "Chestnut 的中文创作者文案与公众号工作流。",
-    "longDescription": "分析个人文风、判断和优化内容选题与文案，并在确认后把文章放入微信公众号草稿箱。",
+    "shortDescription": "个人品牌、故事、品牌指南、产品说明与文案工具箱。",
+    "longDescription": "七个可独立使用的 Skill：品牌故事、一句话定位、品牌表达指南、产品说明书、文风分析、文案 SOP 与公众号草稿发布。",
     "developerName": "chestnutzoe",
     "category": "Productivity",
     "capabilities": ["Interactive", "Write"],
