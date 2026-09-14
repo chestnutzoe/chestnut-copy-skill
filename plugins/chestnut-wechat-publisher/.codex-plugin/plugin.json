@@ -1,0 +1,34 @@
+{
+  "name": "chestnut-wechat-publisher",
+  "version": "2.2.0",
+  "description": "Chestnut 公众号草稿发布：独立安装的公开版 Skill。",
+  "author": {
+    "name": "chestnutzoe",
+    "url": "https://github.com/chestnutzoe"
+  },
+  "homepage": "https://github.com/chestnutzoe/chestnut-copy-skill",
+  "repository": "https://github.com/chestnutzoe/chestnut-copy-skill",
+  "license": "MIT",
+  "keywords": [
+    "chestnut",
+    "copywriting",
+    "wechat",
+    "creator",
+    "content"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Chestnut · 公众号草稿发布",
+    "shortDescription": "Chestnut 公众号草稿发布：独立安装的公开版 Skill。",
+    "longDescription": "Chestnut 公众号草稿发布：独立安装的公开版 Skill。",
+    "developerName": "chestnutzoe",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "使用 chestnut-wechat-publisher 帮我完成公众号草稿发布。"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "chestnut-style-analyzer",
+  "version": "2.2.0",
+  "description": "Chestnut 文风分析：独立安装的公开版 Skill。",
+  "author": {
+    "name": "chestnutzoe",
+    "url": "https://github.com/chestnutzoe"
+  },
+  "license": "MIT"
+}

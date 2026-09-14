@@ -1,0 +1,34 @@
+{
+  "name": "chestnut-product-brief",
+  "version": "2.2.0",
+  "description": "Chestnut 产品说明书：独立安装的公开版 Skill。",
+  "author": {
+    "name": "chestnutzoe",
+    "url": "https://github.com/chestnutzoe"
+  },
+  "homepage": "https://github.com/chestnutzoe/chestnut-copy-skill",
+  "repository": "https://github.com/chestnutzoe/chestnut-copy-skill",
+  "license": "MIT",
+  "keywords": [
+    "chestnut",
+    "copywriting",
+    "wechat",
+    "creator",
+    "content"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Chestnut · 产品说明书",
+    "shortDescription": "Chestnut 产品说明书：独立安装的公开版 Skill。",
+    "longDescription": "Chestnut 产品说明书：独立安装的公开版 Skill。",
+    "developerName": "chestnutzoe",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "使用 chestnut-product-brief 帮我完成产品说明书。"
+    ]
+  }
+}

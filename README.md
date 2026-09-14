@@ -1,5 +1,13 @@
 # Chestnut Plugin
 
+## 整包或单项安装
+
+添加本仓库的 marketplace 后，可以搜索 `chestnut` 安装整个工具箱，也可以按上面的 `chestnut-*` 名称安装单个工具。已有整包就不用重复安装单项。
+
+这里提供 1 个整包和 7 个单项入口。发布到 GitHub 不代表已进入 ChatGPT 公共目录；需要先在支持自定义 marketplace 的客户端添加这个来源。
+
+维护者：`plugins/chestnut/skills/` 是公开包的维护源；单项插件是运行 `node scripts/package-individual-plugins.mjs` 生成的发行副本。不从私人工作目录同步。
+
 这是 Zoe / Chestnut 的个人品牌与创作工具箱。沿用原来的仓库地址和 `chestnut` 插件名，已安装的用户更新即可。
 
 ## 新增四个 Skill（2.2.0）

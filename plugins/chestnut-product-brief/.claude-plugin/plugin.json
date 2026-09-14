@@ -1,0 +1,10 @@
+{
+  "name": "chestnut-product-brief",
+  "version": "2.2.0",
+  "description": "Chestnut 产品说明书：独立安装的公开版 Skill。",
+  "author": {
+    "name": "chestnutzoe",
+    "url": "https://github.com/chestnutzoe"
+  },
+  "license": "MIT"
+}

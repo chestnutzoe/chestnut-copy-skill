@@ -1,0 +1,10 @@
+{
+  "name": "chestnut-copy-sop",
+  "version": "2.2.0",
+  "description": "Chestnut 文案工作流：独立安装的公开版 Skill。",
+  "author": {
+    "name": "chestnutzoe",
+    "url": "https://github.com/chestnutzoe"
+  },
+  "license": "MIT"
+}

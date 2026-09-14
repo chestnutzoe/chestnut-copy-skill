@@ -1,0 +1,10 @@
+{
+  "name": "chestnut-positioning-statement",
+  "version": "2.2.0",
+  "description": "Chestnut 一句话定位：独立安装的公开版 Skill。",
+  "author": {
+    "name": "chestnutzoe",
+    "url": "https://github.com/chestnutzoe"
+  },
+  "license": "MIT"
+}
