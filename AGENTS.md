@@ -1,0 +1,1 @@
+Generated distribution repository. Do not edit Skill content here. The only source of truth is https://github.com/chestnutzoe/chestnut-skills/tree/main/skills/chestnut-copy. Submit fixes to that source. This repository is published automatically.

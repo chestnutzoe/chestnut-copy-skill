@@ -1,0 +1,11 @@
+{
+  "repository": "chestnutzoe/chestnut-skills",
+  "commit": "5e5b77cf63eb3ce35382492e07fe038eb48b8ef0",
+  "path": "skills/chestnut-copy",
+  "skill": "chestnut-copy",
+  "files": [
+    "SKILL.md",
+    "agents/openai.yaml",
+    "references/chestnut-copy.md"
+  ]
+}

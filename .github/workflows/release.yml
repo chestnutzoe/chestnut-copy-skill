@@ -1,0 +1,40 @@
+name: Publish standalone Skill ZIP
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: standalone-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package the exact source file list
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, zipfile, os
+          root = pathlib.Path('.')
+          info = json.loads((root / 'source.json').read_text())
+          name = info['skill']
+          with zipfile.ZipFile(name + '.zip', 'w', zipfile.ZIP_DEFLATED) as z:
+              z.write('LICENSE', 'LICENSE')
+              for file in info['files']:
+                  path = pathlib.PurePosixPath(file)
+                  assert not path.is_absolute() and '..' not in path.parts
+                  z.write(file, name + '/' + file)
+          with open(os.environ['GITHUB_ENV'], 'a') as env:
+              env.write('SKILL=' + name + '\nTAG=source-' + info['commit'][:12] + '\n')
+          PY
+      - name: Publish source-versioned release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$SKILL.zip" --clobber
+          else
+            gh release create "$TAG" "$SKILL.zip" --target "$GITHUB_SHA" --title "$SKILL · $TAG" --notes 'Automatically published from chestnutzoe/chestnut-skills. Source revision and file list are recorded in source.json.' --latest
+          fi

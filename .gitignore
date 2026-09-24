@@ -1,9 +1,2 @@
+dist/
 .DS_Store
-__pycache__/
-*.pyc
-.env
-.env.*
-.secrets/
-outputs/
-articles.json
-文风说明.md
