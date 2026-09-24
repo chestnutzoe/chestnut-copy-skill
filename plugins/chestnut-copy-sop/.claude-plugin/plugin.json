@@ -1,7 +1,7 @@
 {
   "name": "chestnut-copy-sop",
-  "version": "2.2.1",
-  "description": "Chestnut 文案工作流：独立安装的公开版 Skill。",
+  "version": "2.3.0",
+  "description": "Chestnut Copy: develop, review, and refine Chinese creator copy.",
   "author": {
     "name": "chestnutzoe",
     "url": "https://github.com/chestnutzoe"

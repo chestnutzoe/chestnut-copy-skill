@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "chestnut",
-  "description": "Chestnut copy tools: style analysis, copywriting, and WeChat draft publishing.",
+  "description": "Chestnut Copy: standalone copywriting skill.",
   "owner": {
     "name": "chestnutzoe",
     "url": "https://github.com/chestnutzoe"
@@ -9,33 +9,19 @@
   "plugins": [
     {
       "name": "chestnut",
-      "description": "A multi-skill Chestnut creator toolkit with style analysis, copy SOP, and WeChat publishing helpers.",
+      "description": "Chestnut Copy: standalone copywriting skill.",
       "source": "./plugins/chestnut",
       "category": "productivity",
       "tags": [
         "chestnut",
         "copywriting",
-        "wechat",
-        "creator",
         "content"
       ]
     },
     {
-      "name": "chestnut-style-analyzer",
-      "description": "Chestnut 文风分析：独立安装的公开版 Skill。",
-      "source": "./plugins/chestnut-style-analyzer",
-      "category": "productivity"
-    },
-    {
       "name": "chestnut-copy-sop",
-      "description": "Chestnut 文案工作流：独立安装的公开版 Skill。",
+      "description": "Chestnut Copy: standalone copywriting skill.",
       "source": "./plugins/chestnut-copy-sop",
-      "category": "productivity"
-    },
-    {
-      "name": "chestnut-wechat-publisher",
-      "description": "Chestnut 公众号草稿发布：独立安装的公开版 Skill。",
-      "source": "./plugins/chestnut-wechat-publisher",
       "category": "productivity"
     }
   ]

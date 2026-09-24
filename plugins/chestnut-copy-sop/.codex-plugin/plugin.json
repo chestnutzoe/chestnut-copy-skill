@@ -1,7 +1,7 @@
 {
   "name": "chestnut-copy-sop",
-  "version": "2.2.1",
-  "description": "Chestnut 文案工作流：独立安装的公开版 Skill。",
+  "version": "2.3.0",
+  "description": "Chestnut Copy: develop, review, and refine Chinese creator copy.",
   "author": {
     "name": "chestnutzoe",
     "url": "https://github.com/chestnutzoe"
@@ -12,15 +12,14 @@
   "keywords": [
     "chestnut",
     "copywriting",
-    "wechat",
     "creator",
     "content"
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Chestnut · 文案工作流",
-    "shortDescription": "Chestnut 文案工作流：独立安装的公开版 Skill。",
-    "longDescription": "Chestnut 文案工作流：独立安装的公开版 Skill。",
+    "displayName": "Chestnut Copy",
+    "shortDescription": "选题、标题、Hook、正文与改稿。",
+    "longDescription": "独立文案 Skill：判断选题、创作文案、诊断逐字稿并精准改稿。文风分析与公众号发布另行下载。",
     "developerName": "chestnutzoe",
     "category": "Productivity",
     "capabilities": [
@@ -28,7 +27,8 @@
       "Write"
     ],
     "defaultPrompt": [
-      "使用 chestnut-copy-sop 帮我完成文案工作流。"
+      "判断这个选题，并产出封面、标题、Hook 和正文。",
+      "诊断这篇逐字稿，保留有效内容并精准改稿。"
     ]
   }
 }

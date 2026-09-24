@@ -17,34 +17,10 @@
       "category": "Productivity"
     },
     {
-      "name": "chestnut-style-analyzer",
-      "source": {
-        "source": "local",
-        "path": "./plugins/chestnut-style-analyzer"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Productivity"
-    },
-    {
       "name": "chestnut-copy-sop",
       "source": {
         "source": "local",
         "path": "./plugins/chestnut-copy-sop"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Productivity"
-    },
-    {
-      "name": "chestnut-wechat-publisher",
-      "source": {
-        "source": "local",
-        "path": "./plugins/chestnut-wechat-publisher"
       },
       "policy": {
         "installation": "AVAILABLE",

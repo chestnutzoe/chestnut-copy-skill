@@ -23,11 +23,14 @@ It can run alone, but works best with a user-specific `文风说明.md` from the
 
 ## How It Connects
 
-The full Chestnut Copy skill set has three independent skills:
+This package contains only `chestnut-copy-sop`. It runs independently.
 
-1. 文风分析: use the creator's own writing samples to answer `像不像你`.
-2. 爆款文案 SOP: use this method to answer `有没有传播力`.
-3. 公众号发布: send an approved draft to the WeChat draft box.
+Optional companion skills are separate downloads from https://github.com/chestnutzoe/chestnut-skills:
+
+- `chestnut-style-analyzer`: analyze the creator's writing samples.
+- `chestnut-wechat-publisher`: upload an approved article to the WeChat draft box.
+
+Neither companion is required or bundled with Copy.
 
 If a `文风说明.md` exists, load it before drafting. If not, ask whether the user wants to provide samples or continue with the SOP only.
 
@@ -135,4 +138,4 @@ At the end, infer the current workflow stage and give one useful next action whe
 
 This skill can prepare a WeChat-ready mother draft, title, digest, and cover direction. It does not upload drafts by itself.
 
-If the user wants to upload to WeChat, hand off to `公众号发布`.
+If the user wants to upload to WeChat, hand off to `chestnut-wechat-publisher` only if it is available. Otherwise provide the finished copy and the separate download link above; do not claim the publisher is installed or perform its API operations.
