@@ -19,9 +19,9 @@
       ]
     },
     {
-      "name": "chestnut-copy-sop",
+      "name": "chestnut-copy",
       "description": "Chestnut Copy: standalone copywriting skill.",
-      "source": "./plugins/chestnut-copy-sop",
+      "source": "./plugins/chestnut-copy",
       "category": "productivity"
     }
   ]

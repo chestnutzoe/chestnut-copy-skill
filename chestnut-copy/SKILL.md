@@ -1,5 +1,5 @@
 ---
-name: chestnut-copy-sop
+name: chestnut-copy
 description: >-
   Use when a Chinese creator wants to write, rewrite, evaluate, or adapt copy
   with Zoe/Chestnut's copywriting method. Also use to review an existing
@@ -9,7 +9,7 @@ description: >-
   the sake of rewriting.
 ---
 
-# 爆款文案 SOP
+# Chestnut Copy
 
 ## Purpose
 
@@ -23,7 +23,7 @@ It can run alone, but works best with a user-specific `文风说明.md` from the
 
 ## How It Connects
 
-This package contains only `chestnut-copy-sop`. It runs independently.
+This package contains only `chestnut-copy`. It runs independently.
 
 Optional companion skills are separate downloads from https://github.com/chestnutzoe/chestnut-skills:
 
@@ -36,7 +36,7 @@ If a `文风说明.md` exists, load it before drafting. If not, ask whether the 
 
 ## Required Reference
 
-Read `references/chestnut-copy-sop.md` when writing, rewriting, evaluating, or adapting copy.
+Read `references/chestnut-copy.md` when writing, rewriting, evaluating, or adapting copy.
 
 That file contains the detailed workflow:
 

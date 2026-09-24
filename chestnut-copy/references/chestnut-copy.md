@@ -1,11 +1,11 @@
-# Chestnut 爆款文案 SOP
+# Chestnut Copy
 
 This is Zoe/Chestnut's copy production method packaged for public users.
 
 Use it with the user's generated `文风说明.md`:
 
 - `文风说明.md` answers: does this sound like the user?
-- Chestnut 爆款文案 SOP answers: is this worth making, does it have a strong angle, and can it travel across platforms?
+- Chestnut Copy answers: is this worth making, does it have a strong angle, and can it travel across platforms?
 - `publish_draft.py` answers: how does the final local draft land in the WeChat backend?
 
 The product logic is: **user voice outside, Chestnut Copy method inside**.

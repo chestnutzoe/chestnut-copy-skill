@@ -17,10 +17,10 @@
       "category": "Productivity"
     },
     {
-      "name": "chestnut-copy-sop",
+      "name": "chestnut-copy",
       "source": {
         "source": "local",
-        "path": "./plugins/chestnut-copy-sop"
+        "path": "./plugins/chestnut-copy"
       },
       "policy": {
         "installation": "AVAILABLE",

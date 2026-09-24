@@ -1,6 +1,14 @@
-# 迁移到 Copy 2.3.0
+# Skill 更名为 chestnut-copy（2.3.1）
 
-Copy 仓库现在只包含 `chestnut-copy-sop`。原仓库地址与 `chestnut@chestnut` 插件身份保留。
+Skill 正式名称为 `chestnut-copy`，显示名称为 **Chestnut Copy**。原来的 `chestnut-copy-sop` 名称停止使用。仓库地址 `chestnut-copy-skill` 保持不变，兼容整包插件身份 `chestnut@chestnut` 也保留，但其中只有一个 `chestnut-copy` Skill。
+
+- 手动安装：下载新版 `chestnut-copy.zip`，先备份旧文件夹中的个人修改，再将旧 `chestnut-copy-sop` 文件夹替换为 `chestnut-copy`，避免重复加载。
+- 使用 `chestnut@chestnut` 插件：更新后新开会话，调用 `/chestnut:chestnut-copy`。
+- 原来单独安装 `chestnut-copy-sop@chestnut` 插件：通过客户端卸载旧入口，改装 `chestnut-copy@chestnut`。下载/更新不会自动修改手动安装副本。
+
+## 之前的拆分：Copy 2.3.0
+
+Copy 仓库现在只包含 `chestnut-copy`。原仓库地址与 `chestnut@chestnut` 插件身份保留。
 
 版本变化：2.2.0 曾包含七个工具；2.2.1 恢复三个文案相关工具；2.3.0 进一步将文风分析和公众号发布独立出去，Copy 只负责文案。
 
