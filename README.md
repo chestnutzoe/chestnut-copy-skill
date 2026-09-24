@@ -1,29 +1,13 @@
-# Chestnut Plugin
+# Chestnut Copy Skill Set
 
-## 整包或单项安装
+这里继续提供原来的三个文案工具：文风分析、文案 SOP、公众号草稿发布。原仓库地址与 `chestnut@chestnut` 插件身份不变。
 
-添加本仓库的 marketplace 后，可以搜索 `chestnut` 安装整个工具箱，也可以按下方的 `chestnut-*` 名称安装单个工具。已有整包就不用重复安装单项。
+定位、品牌故事、品牌指南、产品说明等独立工具，请去 [Chestnut Skills 工具箱](https://github.com/chestnutzoe/chestnut-skills)，支持单项下载和整包下载。
 
-这里提供 1 个整包和 7 个单项入口。发布到 GitHub 不代表已进入 ChatGPT 公共目录；需要先在支持自定义 marketplace 的客户端添加这个来源。
+**2.2.1 范围修正：** 撤出 2.2.0 加入的四个品牌工具，保留原有文案内容与修正。已经安装过混合版的用户请看 [迁移说明](MIGRATION.md)。
 
-维护者：`plugins/chestnut/skills/` 是公开包的维护源；单项插件是运行 `node scripts/package-individual-plugins.mjs` 生成的发行副本。不从私人工作目录同步。
 
-这是 Zoe / Chestnut 的个人品牌与创作工具箱。沿用原来的仓库地址和 `chestnut` 插件名，已安装的用户更新即可。
-
-## 新增四个 Skill（2.2.0）
-
-| Skill | 产出 |
-| --- | --- |
-| [chestnut-brand-story](plugins/chestnut/skills/chestnut-brand-story/SKILL.md) | 从真实经历梳理个人品牌故事，形成文章或口播初稿 |
-| [chestnut-positioning-statement](plugins/chestnut/skills/chestnut-positioning-statement/SKILL.md) | 一句话暂定定位，以受众和真实经验为依据，不强迫选择单一赛道 |
-| [chestnut-brand-guidance](plugins/chestnut/skills/chestnut-brand-guidance/SKILL.md) | 从 Moodboard、作品和文案整理品牌表达指南，供网站、封面、视频及写作共同使用 |
-| [chestnut-product-brief](plugins/chestnut/skills/chestnut-product-brief/SKILL.md) | 产品说明书：适合谁、价值、价格、交付与边界 |
-
-加上下面三个文案工具，插件现在共 **7 个 Skill**。按需要选，不要求全部按顺序使用。新增四个都是独立公开版，使用你自己的材料，不需要作者的私人文件或课程权限。
-
-不想安装整包：打开上表对应的 Skill，把页面链接发给能读取 GitHub 的 AI agent，说明要用它完成什么。若工具读不了链接，可以下载该文件；链接读取不等于所有 AI 都支持插件安装或联网。
-
-新增 Skill 的手动安装源在 `plugins/chestnut/skills/`。下方根目录的三个文件夹保留，兼容之前的文案工具链接；安装全部 7 个请使用插件入口。
+这是 Zoe / Chestnut 的中文创作者文案 Skill 套装。
 
 它是一个统一的 `chestnut` Claude Code plugin，里面包含多个 Chestnut skills。手动安装时，这些 skill 也可以单独复制使用：
 
@@ -69,11 +53,7 @@
 │       └── skills/
 │           ├── chestnut-style-analyzer/
 │           ├── chestnut-copy-sop/
-│           ├── chestnut-wechat-publisher/
-│           ├── chestnut-brand-story/
-│           ├── chestnut-positioning-statement/
-│           ├── chestnut-brand-guidance/
-│           └── chestnut-product-brief/
+│           └── chestnut-wechat-publisher/
 ├── LICENSE
 ├── README.md
 ├── chestnut-style-analyzer/
@@ -112,19 +92,15 @@
 /plugin install chestnut@chestnut
 ```
 
-这会安装全部 7 个 Skill：
+这会安装当前的 Chestnut skill 套装，包括：
 
 ```text
 chestnut-style-analyzer
 chestnut-copy-sop
 chestnut-wechat-publisher
-chestnut-brand-story
-chestnut-positioning-statement
-chestnut-brand-guidance
-chestnut-product-brief
 ```
 
-以后新增的视频、分镜、Hook、留存率等 Chestnut skills，也可以继续放在同一个 `chestnut` plugin 下，用户调用时会保持统一前缀。
+其他独立工具与整包下载放在新的 [Chestnut Skills](https://github.com/chestnutzoe/chestnut-skills)，不再加入这个 Copy 插件。
 
 请使用完整 HTTPS 链接。更短的 `chestnutzoe/chestnut-copy-skill` 写法可能会让 Claude Code 尝试走 SSH；如果本机还没信任 GitHub host，安装可能失败。
 

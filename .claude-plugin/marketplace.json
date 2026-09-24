@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "chestnut",
-  "description": "Chestnut creator toolkit: install the complete bundle or individual skills.",
+  "description": "Chestnut copy tools: style analysis, copywriting, and WeChat draft publishing.",
   "owner": {
     "name": "chestnutzoe",
     "url": "https://github.com/chestnutzoe"
@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "chestnut",
-      "description": "Chestnut toolkit for personal branding, storytelling, brand guidance, product briefs, copywriting, and WeChat drafts.",
+      "description": "A multi-skill Chestnut creator toolkit with style analysis, copy SOP, and WeChat publishing helpers.",
       "source": "./plugins/chestnut",
       "category": "productivity",
       "tags": [
@@ -19,30 +19,6 @@
         "creator",
         "content"
       ]
-    },
-    {
-      "name": "chestnut-brand-story",
-      "description": "Chestnut 个人品牌故事：独立安装的公开版 Skill。",
-      "source": "./plugins/chestnut-brand-story",
-      "category": "productivity"
-    },
-    {
-      "name": "chestnut-positioning-statement",
-      "description": "Chestnut 一句话定位：独立安装的公开版 Skill。",
-      "source": "./plugins/chestnut-positioning-statement",
-      "category": "productivity"
-    },
-    {
-      "name": "chestnut-brand-guidance",
-      "description": "Chestnut 品牌表达指南：独立安装的公开版 Skill。",
-      "source": "./plugins/chestnut-brand-guidance",
-      "category": "productivity"
-    },
-    {
-      "name": "chestnut-product-brief",
-      "description": "Chestnut 产品说明书：独立安装的公开版 Skill。",
-      "source": "./plugins/chestnut-product-brief",
-      "category": "productivity"
     },
     {
       "name": "chestnut-style-analyzer",

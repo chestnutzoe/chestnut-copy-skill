@@ -17,54 +17,6 @@
       "category": "Productivity"
     },
     {
-      "name": "chestnut-brand-story",
-      "source": {
-        "source": "local",
-        "path": "./plugins/chestnut-brand-story"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Productivity"
-    },
-    {
-      "name": "chestnut-positioning-statement",
-      "source": {
-        "source": "local",
-        "path": "./plugins/chestnut-positioning-statement"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Productivity"
-    },
-    {
-      "name": "chestnut-brand-guidance",
-      "source": {
-        "source": "local",
-        "path": "./plugins/chestnut-brand-guidance"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Productivity"
-    },
-    {
-      "name": "chestnut-product-brief",
-      "source": {
-        "source": "local",
-        "path": "./plugins/chestnut-product-brief"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Productivity"
-    },
-    {
       "name": "chestnut-style-analyzer",
       "source": {
         "source": "local",

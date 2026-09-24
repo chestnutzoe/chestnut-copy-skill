@@ -1,7 +1,7 @@
 {
   "name": "chestnut",
-  "version": "2.2.0",
-  "description": "Seven Chestnut skills for personal branding, stories, brand guidance, product briefs, style, copywriting, and WeChat drafts.",
+  "version": "2.2.1",
+  "description": "Chestnut copy tools: style analysis, copywriting, and WeChat draft publishing.",
   "skills": "./skills/",
   "author": {
     "name": "chestnutzoe",
@@ -10,5 +10,11 @@
   "homepage": "https://github.com/chestnutzoe/chestnut-copy-skill",
   "repository": "https://github.com/chestnutzoe/chestnut-copy-skill",
   "license": "MIT",
-  "keywords": ["chestnut", "copywriting", "wechat", "creator", "content"]
+  "keywords": [
+    "chestnut",
+    "copywriting",
+    "wechat",
+    "creator",
+    "content"
+  ]
 }
