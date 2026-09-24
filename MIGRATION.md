@@ -23,4 +23,4 @@ Copy 仓库现在只包含 `chestnut-copy`。原仓库地址与 `chestnut@chestn
 - [文风分析 ZIP](https://github.com/chestnutzoe/chestnut-skills/releases/latest/download/chestnut-style-analyzer.zip)
 - [其他工具与完整工具箱](https://github.com/chestnutzoe/chestnut-skills)
 
-文风分析继续提供独立下载。公众号发布 Skill 已从当前工具箱和独立分发入口删除；旧版本安装在本地的副本不会自动删除，可通过客户端卸载。
+文风分析继续提供独立下载。公众号发布 Skill 已从当前工具箱移除，其独立仓库保留并归档；旧版本安装在本地的副本不会自动删除，可通过客户端卸载。

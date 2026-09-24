@@ -1,6 +1,6 @@
 {
   "name": "chestnut",
-  "version": "2.4.0+source.7682c1bb52b2",
+  "version": "2.4.0+source.e72c378589e8",
   "description": "Chestnut Copy: develop, review, and refine Chinese creator copy.",
   "author": {
     "name": "chestnutzoe",
@@ -19,7 +19,7 @@
   "interface": {
     "displayName": "Chestnut Copy",
     "shortDescription": "选题、标题、Hook、正文与改稿。",
-    "longDescription": "独立文案 Skill：判断选题、创作文案、诊断逐字稿并精准改稿。文风分析与公众号发布另行下载。",
+    "longDescription": "独立文案 Skill：判断选题、创作文案、诊断逐字稿并精准改稿。文风分析可另行下载；不包含公众号发布工具。",
     "developerName": "chestnutzoe",
     "category": "Productivity",
     "capabilities": [

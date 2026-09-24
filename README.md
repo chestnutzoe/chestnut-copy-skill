@@ -12,7 +12,7 @@
 
 内容在 [总仓库的 skills/chestnut-copy](https://github.com/chestnutzoe/chestnut-skills/tree/main/skills/chestnut-copy) 修改。本仓库由 GitHub Actions 自动发布，不手动维护第二份。修订请提交到总仓库；这里的 Issue 可以用来反馈此 Skill 的问题。
 
-本次来源：[提交 7682c1bb52b2](https://github.com/chestnutzoe/chestnut-skills/commit/7682c1bb52b2232ef8bc8a6cb4d6709a03609d08)。对应文件清单见 [source.json](source.json)。
+本次来源：[提交 e72c378589e8](https://github.com/chestnutzoe/chestnut-skills/commit/e72c378589e8911d2fca9ff9cf2e673bf9edcecd)。对应文件清单见 [source.json](source.json)。
 
 ## 旧用户兼容
 
