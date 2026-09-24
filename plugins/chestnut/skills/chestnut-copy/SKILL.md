@@ -28,9 +28,8 @@ This package contains only `chestnut-copy`. It runs independently.
 Optional companion skills are separate downloads from https://github.com/chestnutzoe/chestnut-skills:
 
 - `chestnut-style-analyzer`: analyze the creator's writing samples.
-- `chestnut-wechat-publisher`: upload an approved article to the WeChat draft box.
 
-Neither companion is required or bundled with Copy.
+The style analyzer is optional and is not bundled with Copy.
 
 If a `文风说明.md` exists, load it before drafting. If not, ask whether the user wants to provide samples or continue with the SOP only.
 
@@ -138,4 +137,4 @@ At the end, infer the current workflow stage and give one useful next action whe
 
 This skill can prepare a WeChat-ready mother draft, title, digest, and cover direction. It does not upload drafts by itself.
 
-If the user wants to upload to WeChat, hand off to `chestnut-wechat-publisher` only if it is available. Otherwise provide the finished copy and the separate download link above; do not claim the publisher is installed or perform its API operations.
+If the user wants to upload to WeChat, provide the finished copy for manual publishing. This collection no longer includes a publishing Skill; do not claim it is installed, link to its retired download, or perform publishing API operations.

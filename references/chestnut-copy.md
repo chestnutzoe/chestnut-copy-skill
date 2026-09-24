@@ -6,7 +6,6 @@ Use it with the user's generated `文风说明.md`:
 
 - `文风说明.md` answers: does this sound like the user?
 - Chestnut Copy answers: is this worth making, does it have a strong angle, and can it travel across platforms?
-- `publish_draft.py` answers: how does the final local draft land in the WeChat backend?
 
 The product logic is: **user voice outside, Chestnut Copy method inside**.
 
